@@ -7,6 +7,7 @@ import Publication from "./pages/Publication";
 import Contact from "./pages/Contact";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
+        <Footer />
       </Router>
     </div>
   );

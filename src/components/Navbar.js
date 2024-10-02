@@ -16,10 +16,9 @@ import '../constants/styles.css';
 const pages = [
   { id: 1, path: '/', label: 'Home' },
   { id: 2, path: '/team', label: 'Team' },
-  { id: 3, path: '/about', label: 'About' },
-  { id: 4, path: '/research', label: 'Research' },
-  { id: 5, path: '/Publication', label: 'Publication' },
-  { id: 6, path: '/contact', label: 'Contact' },
+  { id: 3, path: '/research', label: 'Research' },
+  { id: 4, path: '/Publication', label: 'Publication' },
+  { id: 5, path: '/contact', label: 'Contact' },
 ];
 
 export default function Navbar() {

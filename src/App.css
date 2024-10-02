@@ -2,7 +2,10 @@
   margin: 0; padding: 0;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  gap: 0,
 }
 
 .App-logo {
@@ -31,10 +34,11 @@
   flex-grow: 1;
   /* overflow: hidden; */
   display: flex;
+  flex-direction: column;
   justify-content: center; 
   align-items: center; 
   background-color:burlywood;
-  /* max-height: 100vh; */
+  min-height: calc(100vh - 60px - 100px);
 }
 
 .App-link {
