@@ -35,9 +35,9 @@
   /* overflow: hidden; */
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  background-color:burlywood;
+  /* justify-content: center; 
+  align-items: center;  */
+  /* background-color:burlywood; */
   min-height: calc(100vh - 60px - 100px);
 }
 

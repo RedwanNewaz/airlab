@@ -6,8 +6,8 @@ import TeamMemberCard from '../components/TeamMemberCard';
 
 export default function Team() {
   return (
-    <div style={{ height: '100%', width: '100%' }}>
-      <HeroContainer />
+    <div className="full-height-width flex-column-no-gap">
+      <HeroContainer title={'Current Team Members'} subtitle={'We are a group of enthusiasts interested in Robotics, Machine Learning, Computer Vision and many more'}/>
       <Box sx={{ px: '10%', py: '5%' }}>
         <Grid2 container spacing={2}>
           {teamData.map((member) => (
