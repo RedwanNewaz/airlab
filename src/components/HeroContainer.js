@@ -22,7 +22,7 @@ const HeroSection = styled.section`
   background-position: center, bottom left;
   height: fit-content;
   background-size: cover;
-  color: #fafafc;
+  color: #fa916b;
   height: 60vh;
   background-attachment: fixed;
 

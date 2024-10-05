@@ -24,7 +24,7 @@ const pages = [
 export default function Navbar() {
 
   return (
-    <AppBar position="static" className='navbar-container'>
+    <AppBar position="sticky" className='navbar-container' sx={{color: 'rgb(31, 38, 51)', backgroundColor: '#fa916b'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />   */} {/**-----> ICON PLACEHOLDER */}
@@ -58,7 +58,7 @@ export default function Navbar() {
             </IconButton>
               {pages.map((page) => (
                 <MenuItem key={page.id} >
-                  <Typography sx={{ textAlign: 'center' }}>{page.label}</Typography>
+                  <Typography sx={{ textAlign: 'center', color: 'rgb(31, 38, 51)' }}>{page.label}</Typography>
                 </MenuItem>
               ))}
           </Box>
@@ -85,7 +85,7 @@ export default function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page.id}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', color: 'rgb(31, 38, 51)'}}
                 component={Link}
                 to={page.path}
                 // href={page.path}

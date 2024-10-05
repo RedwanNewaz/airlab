@@ -13,7 +13,7 @@ export default function ResearchCard({ researchData }) {
     <div style={{ width: "100%", height: "500px"}}>
       <Card
         sx={{
-          width: 400,
+          width: 350,
           maxWidth: '100%',
           height: "100%",
           display: "flex",
@@ -46,8 +46,8 @@ export default function ResearchCard({ researchData }) {
                   {researchData.desc}
                 </Typography>
               </Grid>
-              <Grid size={12}>
-                <Stack direction="row" spacing={0} width={'100%'} overflow={'scroll'}>
+              <Grid size={12} sx={2}>
+                <Stack direction="row" rowGap={1} justifyContent={'center'} spacing={1} width={'100%'} flexWrap={'wrap'}>
                   {researchData.tags &&
                     researchData.tags.map((tag) => {
                       return <Chip label={tag} size="small"/>;

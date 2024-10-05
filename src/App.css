@@ -5,7 +5,10 @@
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  gap: 0,
+  gap: 0;
+  background-color: #F0F0F0;
+  /* color: coral; */
+  /* background-color: rgb(31, 38, 51); */
 }
 
 .App-logo {
