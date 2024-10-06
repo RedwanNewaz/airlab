@@ -2,7 +2,6 @@ export const contactData = [
     {
         name: 'Abdullah Al Redwan Newaz',
         position: 'Assistant Research Professor',
-        phone: '0000000000',
         email: 'aredwann@uno.edu',
         logo: 'profile.png',
     },
