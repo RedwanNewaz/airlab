@@ -39,7 +39,7 @@ export default function ResearchCard({ researchData }) {
               height: isSmallScreen ? 260 : 220,
               objectFit: 'cover',
             }}
-            image={require('../assets/images/profile.png')}
+            image={researchData.image ? require('../assets/images/'+researchData.image) : require('../assets/images/profile.png')  }
             alt="Profile"
           />
           <CardContent sx={{ flexGrow: 1, overflow: "auto" }}>

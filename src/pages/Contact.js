@@ -68,7 +68,7 @@ export default function Contact() {
                     {contact.logo && (
                       <Avatar
                         alt={contact.name}
-                        src={contact.logo}
+                        src={require('../assets/images/'+contact.logo)}
                         sx={{ width: 56, height: 56 }}
                       />
                     )}

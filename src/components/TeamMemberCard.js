@@ -45,7 +45,7 @@ export default function TeamMemberCard({ memberData }) {
               height: isSmallScreen ? 320 : 220,
               objectFit: 'cover',
             }}
-            image={require('../assets/images/profile.png')}
+            image={memberData.photo ? require('../assets/images/'+memberData.photo) : require('../assets/images/profile.png')  }
             alt="Profile"
           />
           <CardContent sx={{ flexGrow: 1, textAlign: 'center' }}>

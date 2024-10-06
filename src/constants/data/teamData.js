@@ -6,7 +6,7 @@ const teamData = [
     department: "Computer Science",
     description:
       "My research interests lie in the areas of Robotics, Artificial Intelligence, Machine Learning, Deep Learning, and Cyber-Physical Systems.Particularly, my research interests include autonomous systems, applied machine learning, motion planning under uncertainty, optimal control, deep learning-based perception methods, model checking, and related domains. My research goal is to balance both theory and practical implementations, with an emphasis on developing elegant, scalable, theoretically sound algorithms for solving real-world robotics applications.",
-    photo: '',
+    photo: 'profile.png',
   },
   {
     id: 2,

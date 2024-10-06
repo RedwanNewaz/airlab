@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import videoSrc from '../assets/videos/YOLOTAG_spiral_eight_final-2024-03-18_16.12.55.mp4'; // Adjust the video path as necessary
+// import videoSrc from '../assets/videos/YOLOTAG_spiral_eight_final-2024-03-18_16.12.55.mp4'; // Adjust the video path as necessary
 
 export default function VideoHeroContainer({ title, subtitle }) {
   return (
@@ -12,7 +12,7 @@ export default function VideoHeroContainer({ title, subtitle }) {
         controls
         // playsInline
       >
-        <source src={videoSrc} type="video/mp4" />
+        <source src={''} type="video/mp4" />
         Your browser does not support the video tag.
       </VideoBackground>
       <div className="heroInner">

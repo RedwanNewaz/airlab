@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Get Started
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install Dependencies
 
-## Available Scripts
+- Make sure you have node and npm installed
+- Go to the project directory and run ``` npm install ```
 
-In the project directory, you can run:
+## Run the application
 
-### `npm start`
+- From the project directory run ``` npm start ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website should be hosted at localhost:(port). For example: localhost:3000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Edit the website
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+All the text in the website can be edited from a single directory: ``` airlab/src/constanst/data ```
 
-### `npm run build`
+- To Edit the text in the Large Poster/Hero Image which is in every page, go to ```heroImageData.js```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - To Add/Edit any other content from the page, go to ```<page_name>Data.js```.
+    1. Publication
+        - To edit the content in the publication page, go to ```publicationData.js``` and edit the value of the hashmap stored in the ```publicationData``` array. 
+        - To add a publication content, simply add a new hasmap to the same ```publicationData``` array.
+        <br/>
+        **Note:** If you add/edit a **year** which is not in the separate ```years``` array already then make sure to add taht year to it as well.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    2. Research:
+         - To edit the content in the research page, go to ```researchData.js``` and edit the value of the hashmap stored in the ```researchData``` array.
+        - To add a research content, simply add a new hasmap to the same ```researchData``` array. 
+        - To add/edit the research content's image, make sure the image is in ```airlab/src/assets/images``` directory. The value of the ```image``` key will be ```file_name``` of the image only. If an image is not available then leave the it as an empty string. 
+        <br/>
+        **Note:** If you add/edit a **tag** which is not in the separate ```tags``` array already then make sure to add that tag to it as well.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    3. Team:
+        - To add/edit a team member's photo go to ```teamData.js``` and make sure the photo is in ```airlab/src/assets/images``` directory. The value of the ```photo``` key will be ```file_name``` only. If a photo is not available then leave the it as an empty string.
 
-### `npm run eject`
+    4. Contact:
+        - To add/edit a contact's photo go to ```contactData.js```. Make sure the desired photo is in ```airlab/src/assets/images``` directory. The value of the ```photo``` key will be the ```file_name``` of image only. If a photo is not available then leave the it as an empty string.
+        - If a phone number of a contact is not available then leave it as an empty string.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    **NOTE:** 
+    1. Make sure the id's of the array inside the hashmap is unique.
+    2. DO not change the keys of the elements inside the hashmap. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
