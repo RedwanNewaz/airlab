@@ -1,19 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import HeroContainer from "../components/HeroContainer";
 import { Box, Grid2 } from "@mui/material";
 import { researchData, tags } from "../constants/data/researchData";
 import ResearchCard from "../components/ResearchCard";
 import Stack from "@mui/material/Stack";
-import Chip from "@mui/material/Chip";
 import SelectInput from "../components/SelectInput";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { heroResearch } from "../constants/data/heroImageData";
+
+
 
 export default function Research() {
   const [researchWorks, setResearchWorks] = useState(researchData);
 
   const filterResearchByTags = (menuItems) => {
-    if (menuItems.length == 0) {
+    if (menuItems.length === 0) {
       setResearchWorks(researchData);
       return;
     }
@@ -28,21 +31,19 @@ export default function Research() {
       setResearchWorks(researchData);
       return;
     }
-    const filteredResearchWorks = researchData.filter(research => research.title === title);
+    const filteredResearchWorks = researchData.filter(
+      (research) => research.title === title
+    );
     setResearchWorks(filteredResearchWorks);
-
   };
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <HeroContainer
-        title={"Research"}
-        subtitle={"We work on making autonmous systems"}
-      />
+      <HeroContainer title={heroResearch.title} subtitle={heroResearch.subtitle} />
       <Stack
-        paddingLeft={"10%"}
+        paddingLeft={{ xs: "2%", sm: "2%" }}
         paddingTop={"2%"}
-        direction={"row"}
+        direction={{ xs: "column", sm: "row" }}
         spacing={1}
         justifyContent={"flex-start"}
         alignItems={"center"}
@@ -57,7 +58,7 @@ export default function Research() {
           onChange={filterResearchByTitle}
           disablePortal
           options={researchData.map((research) => research.title)}
-          sx={{ width: 300, margin: 0 }}
+          sx={{ width: { xs: 200, sm: 300 }, margin: 0 }}
           renderInput={(params) => (
             <TextField
               sx={{ margin: 0 }}
@@ -67,14 +68,35 @@ export default function Research() {
           )}
         />
       </Stack>
-      <Box sx={{ px: "10%", py: "5%" }}>
-        <Grid2 container spacing={2}>
+      <Box sx={{ px: { xs: "5%", sm: "2%" }, py: { xs: "3%", sm: "5%" } }}>
+      <ThemeProvider
+      theme={createTheme({
+        breakpoints: {
+          values: {
+            laptop: 1024,
+            tablet: 720,
+            mobile: 0,
+            desktop: 1280,
+          },
+        },
+      })}
+    >
+      <Grid2 container spacing={{ mobile: 1, tablet: 2, laptop: 2 }}>
+        {researchWorks.map((research) => (
+          <Grid2 key={research.id} size={{ mobile: 12, tablet: 4, laptop: 3 }}>
+            <ResearchCard researchData={research} />
+          </Grid2>
+        ))}
+      </Grid2>
+
+    </ThemeProvider>
+        {/* <Grid2 container spacing={2}>
           {researchWorks.map((research) => (
             <Grid2 item xs={12} sm={6} md={4} lg={3} key={research.id}>
               <ResearchCard researchData={research} />
             </Grid2>
           ))}
-        </Grid2>
+        </Grid2> */}
       </Box>
     </div>
   );

@@ -14,7 +14,7 @@ const openGoogleMaps = () => {
   return (
     <div>
       <Button onClick={openGoogleMaps}>
-        <img src={require('../constants/images/maps.png')} height={400} />
+        <img src={require('../assets/images/maps.png')} height={400} />
       </Button>
     </div>
   );

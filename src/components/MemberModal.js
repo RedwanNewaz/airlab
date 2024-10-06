@@ -29,7 +29,7 @@ export default function MemberModal({ handleModal, memberData }) {
       <Box sx={style}>
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 4 }}>
           <Grid size={6}>
-                <img src={require('../constants/images/profile.png')} width={'100%'}/>
+                <img src={require('../assets/images/profile.png')} width={'100%'}/>
           </Grid>
           <Grid size={6}>
               <Typography id="modal-modal-title" variant="h6" component="h2">

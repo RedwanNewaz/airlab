@@ -26,7 +26,51 @@ const teamData = [
     description:
       "lorem ipsum dolor sit amet, consectetur adip",
     photo: '',
-
+  },
+  {
+    id: 3,
+    name: "Simant Singh",
+    position: "Undergraduate Assistant",
+    department: "Computer Science",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip",
+    photo: '',
+  },
+  {
+    id: 3,
+    name: "Simant Singh",
+    position: "Undergraduate Assistant",
+    department: "Computer Science",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip",
+    photo: '',
+  },
+  {
+    id: 3,
+    name: "Simant Singh",
+    position: "Undergraduate Assistant",
+    department: "Computer Science",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip",
+    photo: '',
+  },
+  {
+    id: 3,
+    name: "Simant Singh",
+    position: "Undergraduate Assistant",
+    department: "Computer Science",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip",
+    photo: '',
+  },
+  {
+    id: 3,
+    name: "Simant Singh",
+    position: "Undergraduate Assistant",
+    department: "Computer Science",
+    description:
+      "lorem ipsum dolor sit amet, consectetur adip",
+    photo: '',
   },
 ];
 
