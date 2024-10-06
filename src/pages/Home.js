@@ -8,18 +8,18 @@ import HeroContainer from '../components/HeroContainer';
 
 export default function Home() {
   return (
-    <Box className="full-height-width">
+    <Box className="full-height-width flex-column-no-gap">
       {/* <VideoHeroContainer title={heroHome.title} subtitle={heroHome.subtitle}/> */}
       <HeroContainer title={heroHome.title} subtitle={heroHome.subtitle}/>
-      <div style={{width: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', marginLeft: '2%'}}>
+      <div style={{width: '98%', display: 'flex', justifyContent: 'flex-start', alignItems: 'flex-start', paddingLeft: '2%'}}>
         <Stack spacing={2} sx={{ width: '70%', py: '2rem'}}>
           {homeData && homeData.map((item, index) => (
             <Box key={index} sx={{ 
-                padding: '1.5rem', 
-                borderRadius: '8px', 
-                bgcolor: 'white', 
-                boxShadow: 2, 
-              }}>
+              padding: '1.5rem', 
+              borderRadius: '8px', 
+              bgcolor: 'white', 
+              boxShadow: 2, 
+            }}>
               <Typography sx={{ marginTop: '0.5rem' }}>
                 {item.content}
               </Typography>
