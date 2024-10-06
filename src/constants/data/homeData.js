@@ -1,7 +1,7 @@
 export const homeData = [
     {
         id: 1,
-        content: 'Welcome to the Autonomous Intelligent Robotics Lab (AIR Lab) at The University of New Orleans. Our mission is to develop and implement advanced technologies to enable the creation of autonomous intelligent robots that can navigate, perceive, and interact with their environment in a safe and efficient manner. Our research focuses on various aspects such as perception, navigation, control, and learning algorithms. '
+        content: 'Welcome to the Autonomous Intelligent Robotics Lab (AiR Lab) at The University of New Orleans. Our mission is to develop and implement advanced technologies to enable the creation of autonomous intelligent robots that can navigate, perceive, and interact with their environment in a safe and efficient manner. Our research focuses on various aspects such as perception, navigation, control, and learning algorithms. '
     },
     {
         id: 2,

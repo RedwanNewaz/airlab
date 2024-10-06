@@ -24,8 +24,8 @@ export const publicationData = [
       "Pratama, Ferdian Adi",
       "Chong, Nak Young"
     ],
-    "journal": "2013 Ieee Ro-Man",
-    "bibtex": "@inproceedings{newaz2013exploration,\n      title={Exploration priority based heuristic approach to uav path planning},\n      author={Newaz, Abdullah Al Redwan and Pratama, Ferdian Adi and Chong, Nak Young},\n      booktitle={2013 Ieee Ro-Man},\n      year={2013},\n      publisher={Unknown}\n    }",
+    "journal": "22nd IEEE International Conference on Robot \\& Human Interactive Communication (RO-MAN)",
+    "bibtex": "@inproceedings{newaz2013exploration,\n      title={Exploration priority based heuristic approach to uav path planning},\n      author={Newaz, Abdullah Al Redwan and Pratama, Ferdian Adi and Chong, Nak Young},\n      booktitle={22nd IEEE International Conference on Robot \\& Human Interactive Communication (RO-MAN)},\n      year={2013},\n      publisher={Unknown}\n    }",
     "abstract": "No abstract available"
   },
   {
@@ -71,8 +71,8 @@ export const publicationData = [
       "Jeong, Sungmoon",
       "Chong, Nak Young"
     ],
-    "journal": "2016 IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)",
-    "bibtex": "@inproceedings{newaz2016fast,\n      title={Fast radioactive hotspot localization using a UAV},\n      author={Newaz, Abdullah Al Redwan and Jeong, Sungmoon and Chong, Nak Young},\n      booktitle={2016 IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)},\n      year={2016},\n      publisher={Unknown}\n    }",
+    "journal": "IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)",
+    "bibtex": "@inproceedings{newaz2016fast,\n      title={Fast radioactive hotspot localization using a UAV},\n      author={Newaz, Abdullah Al Redwan and Jeong, Sungmoon and Chong, Nak Young},\n      booktitle={IEEE International Conference on Simulation, Modeling, and Programming for Autonomous Robots (SIMPAR)},\n      year={2016},\n      publisher={Unknown}\n    }",
     "abstract": "No abstract available"
   },
   {

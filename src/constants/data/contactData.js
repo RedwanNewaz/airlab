@@ -19,19 +19,5 @@ export const contactData = [
         phone: '',
         email: 'sbsingh3@uno.edu',
         logo: 'profile.png'
-    },
-    {
-        name: 'David Pace',
-        position: 'IT Director',
-        phone: '',
-        email: 'sraxit@uno.edu',
-        logo: ''
-    },
-    {
-        name: 'David Pace',
-        position: 'IT Director',
-        phone: '',
-        email: 'sraxit@uno.edu',
-        logo: ''
     }
 ]
