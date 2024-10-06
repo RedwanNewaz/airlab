@@ -14,7 +14,7 @@ const teamData = [
     position: "Graduate Research Assistant",
     department: "Computer Science",
     description:
-      "lorem ipsum dolor sit amet, consectetur adip",
+      "Motion Planning",
     photo: '',
 
   },
@@ -24,54 +24,19 @@ const teamData = [
     position: "Undergraduate Assistant",
     department: "Computer Science",
     description:
-      "lorem ipsum dolor sit amet, consectetur adip",
+      "Unmanned Aerial Vehicle",
     photo: '',
   },
   {
-    id: 3,
-    name: "Simant Singh",
-    position: "Undergraduate Assistant",
+    id: 4,
+    name: "Abhishek Khatri",
+    position: "Graduate Research Assistant",
     department: "Computer Science",
     description:
-      "lorem ipsum dolor sit amet, consectetur adip",
+      "Robotics and distributed database",
     photo: '',
   },
-  {
-    id: 3,
-    name: "Simant Singh",
-    position: "Undergraduate Assistant",
-    department: "Computer Science",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adip",
-    photo: '',
-  },
-  {
-    id: 3,
-    name: "Simant Singh",
-    position: "Undergraduate Assistant",
-    department: "Computer Science",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adip",
-    photo: '',
-  },
-  {
-    id: 3,
-    name: "Simant Singh",
-    position: "Undergraduate Assistant",
-    department: "Computer Science",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adip",
-    photo: '',
-  },
-  {
-    id: 3,
-    name: "Simant Singh",
-    position: "Undergraduate Assistant",
-    department: "Computer Science",
-    description:
-      "lorem ipsum dolor sit amet, consectetur adip",
-    photo: '',
-  },
+  
 ];
 
 
