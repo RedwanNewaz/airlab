@@ -6,7 +6,7 @@ const teamData = [
     department: "Computer Science",
     description:
       "My research interests lie in the areas of Robotics, Artificial Intelligence, Machine Learning, Deep Learning, and Cyber-Physical Systems.Particularly, my research interests include autonomous systems, applied machine learning, motion planning under uncertainty, optimal control, deep learning-based perception methods, model checking, and related domains. My research goal is to balance both theory and practical implementations, with an emphasis on developing elegant, scalable, theoretically sound algorithms for solving real-world robotics applications.",
-    photo: 'profile.png',
+    photo: 'redwan.jpg',
   },
   {
     id: 2,
@@ -14,8 +14,8 @@ const teamData = [
     position: "Graduate Research Assistant",
     department: "Computer Science",
     description:
-      "Motion Planning",
-    photo: '',
+      "My research focuses on the intersection of Robotics, Machine Learning, Deep Learning, and Cyber-Physical Systems. Currently, I'm developing vision-based localization techniques for UAV navigation using fiducial markers. This project combines advanced computer vision with autonomous drone systems, pushing the boundaries of precise aerial navigation in complex environments.",
+    photo: 'sourav.png',
 
   },
   {
@@ -24,8 +24,8 @@ const teamData = [
     position: "Undergraduate Assistant",
     department: "Computer Science",
     description:
-      "Unmanned Aerial Vehicle",
-    photo: '',
+      "Advancing drone navigation through innovative trajectory planning, generation, and path-following algorithms. Enhancing UAV state estimation and localization techniques, including filtering and sensor fusion. Investigating Fiducial Marker systems for optimized UAV positioning in diverse environments.",
+    photo: 'simant.png',
   },
   {
     id: 4,

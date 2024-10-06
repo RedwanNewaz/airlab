@@ -5,6 +5,10 @@ export const homeData = [
     },
     {
         id: 2,
-        content: 'At AIR Lab, we strive to develop innovative solutions that leverage cutting-edge technologies to create efficient autonomous robots. Our research team is committed to continuously improving our algorithms and technologies, and we are always eager to explore new ideas and approaches to address the challenges of autonomous robotics.'
+        content: 'In our group, the prime directive for researchers is to focus on the most interesting and impactful research questions. When addressing autonomy research, we strive to identify capabilities robots currently lack, explain technical gaps that existed prior to the research, and uncover underlying principles that can be applied broadly.'
+    },
+    {
+        id: 3,
+        content: 'The AiR Lab typically consists of 2-6 students. Our structure includes weekly one-on-one meetings with each student and weekly group meetings, which we consider the most important meeting of the week. These group meetings provide opportunities for collaborative learning and engagement. We strongly encourage collaboration within the group and with other research groups, as we believe research in autonomous robots is a team sport.'
     }
 ]
