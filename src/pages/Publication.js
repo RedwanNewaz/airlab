@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import HeroContainer from "../components/HeroContainer";
-import { Box, Stack, Chip, Paper, Typography, Grid2 } from "@mui/material";
+import { Box, Stack, Chip, Paper, Typography, Grid2, useMediaQuery } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { publicationData, years } from "../constants/data/publicationData";
 import SelectInput from "../components/SelectInput";
@@ -17,6 +17,8 @@ export default function Publication() {
   const [publications, setPublications] = useState({});
   const [openBibtex, setOpenBibtex] = useState(null);
   const [openAbstract, setOpenAbstract] = useState(null);
+  const isSmallScreen = useMediaQuery("(max-width:600px)"); // Media query for small screens
+
 
   const handleOpenBibtex = (id) => {
     setOpenAbstract(null);
@@ -80,9 +82,8 @@ export default function Publication() {
           saveMenuItems={filterPublications}
         />
       </Stack>
-
-      <Box sx={{ px: { xs: "0", sm: "10%" }, py: { xs: "5%", sm: "5%" } }}>
-        <Grid2 container spacing={3} direction="column" >
+      <Box sx={{ px: { xs: "3%", sm: "10%" }, py: '5%', maxWidth: '90vw'}}>
+        <Grid2 maxWidth={'100%'} container spacing={3} direction="column" >
           {Object.keys(publications)
             .sort((a, b) => b - a)
             .map((year) => (
@@ -93,7 +94,7 @@ export default function Publication() {
                     textAlign: "left",
                     width: "100%",
                     backgroundColor: "#ffffff",
-                    padding: { xs: "10px", sm: "20px" },
+                    padding: '2%',
                     borderRadius: "10px",
                     boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
                   }}
