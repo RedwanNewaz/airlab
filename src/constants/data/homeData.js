@@ -39,30 +39,30 @@ export const homeCardData = [
             href: "https://arxiv.org/abs/2409.02334",
         },
     ],
-    relatedResearch: [3, 1, 4, 2, 4, 1],
-    relatedPublication: [4, 5],
+    relatedResearch: [5, 3],
+    relatedPublication: [3, 1, 4, 2, 5, 1, 6, 14],
   },
   {
     title: "UGV (Autonomous Car) Research",
     subtitle:
-      "The Unmanned Ground Vehicle(UGV) Fleet is a robotic system designed to perform various tasks, such as transportation, logistics, and delivery.",
+      "How to design robust perception and decision-making systems that can handle complex and unpredictable real-world scenarios?",
     image: "ugv_fleet.png",
     primaryContent:
-      "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
+      "One of the most critical open research questions revolves around ensuring the safety and reliability of autonomous ground vehicles. While UGVs have the potential to reduce accidents caused by human error, they still face significant challenges.",
     secondaryContent: [
       {
         header: "How it works",
         content:
-          "UAVs use drone technology to operate autonomously, allowing for safe and efficient delivery of goods, services, and information.",
+          "UGVs use robotic technology to operate autonomously, allowing for safe and efficient delivery of goods, services, and information.",
       },
       {
         header: "Applications",
         content:
-          "UAVs have the potential to revolutionize various industries, such as agriculture, construction, and transportation, by enabling safe and efficient delivery of goods, services, and information.",
+          "UGVs have the potential to revolutionize various industries, such as agriculture, construction, and transportation, by enabling safe and efficient delivery of goods, services, and information.",
       },
     ],
-    relatedResearch: [2, 3],
-    relatedPublication: [1, 2, 6],
+    relatedResearch: [1, 2],
+    relatedPublication: [13, 17, 22, 23, 26, 16],
   },
   {
     title: "Robotic Manupulator (Arm) Research",
@@ -84,7 +84,7 @@ export const homeCardData = [
       },
     ],
     relatedResearch: [4],
-    relatedPublication: [3, 8, 9],
+    relatedPublication: [7, 11, 14],
   },
   {
     title: "ASV (Autonomous Boats) Research",
@@ -92,20 +92,20 @@ export const homeCardData = [
       "How can a team of ASVs work together to create maps of changing water quality conditions in unexplored areas?",
     image: "asvs.png",
     primaryContent:
-      "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
+      "Discover the benefits of using ASVs in various industries such as Ocean Exploration, Lake Restoration, and transportation.",
     secondaryContent: [
       {
         header: "How it works",
         content:
-          "UAVs use drone technology to operate autonomously, allowing for safe and efficient delivery of goods, services, and information.",
+          "Autonomous Surface Vehicles (ASVs), also known as autonomous boats, are unmanned vessels capable of operating independently on the water's surface. ASVs utilize various propulsion methods such as Petrol engines, Electric outboard motors, Water jets, Renewable energy sources (for long-endurance missions).",
       },
       {
         header: "Applications",
         content:
-          "UAVs have the potential to revolutionize various industries, such as agriculture, construction, and transportation, by enabling safe and efficient delivery of goods, services, and information.",
+          " ASVs can collect various types of data, including oceanographic measurements, water quality information, and imagery for reef mapping or environmental monitoring",
       },
     ],
-    relatedResearch: [],
-    relatedPublication: [6],
+    relatedResearch: [1, 3],
+    relatedPublication: [12, 21, 22, 25, 28, 10],
   },
 ];

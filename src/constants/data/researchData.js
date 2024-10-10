@@ -25,7 +25,7 @@ export const researchData = [
     {
         id: 4,
         title: 'Robotic Applied Behavior Analysis',
-        desc: 'Vision-based Robust UAV Navigation with Fiducial Markers',
+        desc: 'Self-Taught Robotic System for Personalized Autism Interventions',
         tags: ['Children with ASD', 'Self-taught Robots', 'Privacy Preserving Database', 'ABA therapy' ],
         // publishedDate: '3 September 2024',
         image: 'raba.png',
@@ -40,4 +40,4 @@ export const researchData = [
     },
 ]
 
-export const tags = ['Computer Vision', 'Fiducial Markers', 'Machine Learning', 'Object Detection', 'Planning', 'Control', 'Perception'];
+export const tags = ['Autonomous Systems', 'Decentralized Systems', 'Gaussian Process', 'Spatiotemporal fields', 'Deep Learning', 'Multimodal Sensor Fusion', 'Ensemble Learning', 'Fiducial Marker Detection', 'Pedestrain Detection', 'Self-driving Cars', 'Children with ASD', 'Self-taught Robots', 'Privacy Preserving Database', 'ABA therapy', 'Topographic Mapping ', 'Source Localization', 'Variational Bayesian', 'GMM'];
