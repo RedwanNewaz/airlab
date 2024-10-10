@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroContainer from "../components/HeroContainer";
 import { Box, Grid2 } from "@mui/material";
 import { researchData, tags } from "../constants/data/researchData";
 import ResearchCard from "../components/ResearchCard";
 import Stack from "@mui/material/Stack";
 import SelectInput from "../components/SelectInput";
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { heroResearch } from "../constants/data/heroImageData";
-
+import CustomAutoComplete from "../components/CustomAutoComplete";
 
 
 export default function Research() {
   const [researchWorks, setResearchWorks] = useState(researchData);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when this component mounts
+  }, []);
 
   const filterResearchByTags = (menuItems) => {
     if (menuItems.length === 0) {
@@ -54,19 +56,7 @@ export default function Research() {
           menuOptions={tags}
           saveMenuItems={filterResearchByTags}
         />
-        <Autocomplete
-          onChange={filterResearchByTitle}
-          disablePortal
-          options={researchData.map((research) => research.title)}
-          sx={{ width: { xs: 200, sm: 300 }, margin: 0 }}
-          renderInput={(params) => (
-            <TextField
-              sx={{ margin: 0 }}
-              {...params}
-              label="Search Research By Title"
-            />
-          )}
-        />
+        <CustomAutoComplete data={researchData} filterData={filterResearchByTitle} textFieldLabel={"Search Research By Title"} />
       </Stack>
       <Box sx={{ px: { xs: "5%", sm: "2%" }, py: { xs: "3%", sm: "5%" } }}>
       <ThemeProvider

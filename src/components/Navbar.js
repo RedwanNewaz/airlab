@@ -19,7 +19,8 @@ const pages = [
   { id: 2, path: "/team", label: "Team" },
   { id: 3, path: "/research", label: "Research" },
   { id: 4, path: "/Publication", label: "Publication" },
-  { id: 5, path: "/contact", label: "Contact" },
+  { id: 5, path: "/news", label: "News" },
+  { id: 6, path: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

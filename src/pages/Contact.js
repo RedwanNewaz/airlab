@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect} from "react";
 import HeroContainer from "../components/HeroContainer";
 import Maps from "../components/Maps";
 import { contactData } from "../constants/data/contactData";
@@ -9,6 +9,9 @@ import { heroContact } from "../constants/data/heroImageData";
 
 export default function Contact() {
   const isSmallScreen = useMediaQuery("(max-width:400px)"); // Media query for small screens
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when this component mounts
+  }, []);
 
   return (
     <div className="full-height-width flex-column-no-gap">
