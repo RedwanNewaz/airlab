@@ -9,8 +9,6 @@ export default function TopNews() {
   return (
     <Box
       sx={{
-        py: "1rem",
-        my: "2rem",
         backgroundColor: "#f5f5f5",
         borderRadius: "8px",
         boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
@@ -22,6 +20,7 @@ export default function TopNews() {
         variant="h5"
         gutterBottom
         sx={{
+          py: '0.5rem',
           fontWeight: "bold",
           color: "#2C3E50",
           textAlign: "center",

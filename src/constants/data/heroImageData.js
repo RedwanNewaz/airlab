@@ -1,7 +1,7 @@
 export const heroHome = {
   id: "hero-home",
   title: "Autonomous Intelligent Robotics Lab",
-  subtitle: "",
+  subtitle: "University of New Orleans",
 };
 
 export const heroTeam = {

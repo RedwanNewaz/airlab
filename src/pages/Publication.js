@@ -5,6 +5,7 @@ import { styled } from "@mui/material/styles";
 import { publicationData, years } from "../constants/data/publicationData";
 import SelectInput from "../components/SelectInput";
 import { heroPublication } from "../constants/data/heroImageData";
+import { useLocation } from 'react-router-dom';
 
 const ChipPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -18,6 +19,25 @@ export default function Publication() {
   const [openBibtex, setOpenBibtex] = useState(null);
   const [openAbstract, setOpenAbstract] = useState(null);
   const isSmallScreen = useMediaQuery("(max-width:600px)"); // Media query for small screens
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1)); // Get element by id
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    };
+
+    // Using setTimeout to ensure that the DOM is fully rendered before scrolling
+    const timeoutId = setTimeout(scrollToHash, 0); 
+
+    return () => clearTimeout(timeoutId); // Cleanup timeout on unmount
+  }, [location]);
 
 
   const handleOpenBibtex = (id) => {
@@ -83,7 +103,7 @@ export default function Publication() {
         />
       </Stack>
       <Box sx={{ px: { xs: "3%", sm: "10%" }, py: '5%', maxWidth: '90vw'}}>
-        <Grid2 maxWidth={'100%'} container spacing={3} direction="column" >
+        <Grid2 maxWidth={'100%'} container spacing={3} direction="column">
           {Object.keys(publications)
             .sort((a, b) => b - a)
             .map((year) => (
@@ -112,7 +132,9 @@ export default function Publication() {
                     <Stack
                       spacing={2}
                       key={pub.id}
+                      id={`publication-item-${pub.id}`} // Add id for the item
                       sx={{
+                        scrollMarginTop: "72px",
                         padding: { xs: "10px", sm: "15px" },
                         border: "1px solid #e0e0e0",
                         borderRadius: "8px",

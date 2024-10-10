@@ -13,7 +13,7 @@ export default function Footer() {
         <Grid2 item xs={12} sm={6} md={4} display="flex" alignItems="center" justifyContent={{ xs: 'center', md: 'flex-start' }}>
           <Avatar
             alt="Air Lab Logo"
-            src="/path/to/airlab-logo.png"
+            src={require("../assets/images/airlab-logo.png")}
             sx={{ width: 64, height: 64, mr: { xs: 0, md: 2 }, mb: { xs: 2, md: 0 } }}
           />
           <Stack alignItems='center' spacing={1} textAlign='left'>
