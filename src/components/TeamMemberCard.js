@@ -79,7 +79,7 @@ export default function TeamMemberCard({ memberData }) {
         </CardActionArea>
       </Card>
       {openModal && (
-        <MemberModal handleModal={handleModal} memberData={memberData} />
+        <MemberModal handleModal={handleModal} memberData={memberData} openModal={openModal}/>
       )}
     </div>
   );

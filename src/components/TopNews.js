@@ -33,7 +33,7 @@ export default function TopNews() {
         {topNews.map((newsItem, index) => (
           <Slide
             key={newsItem.id}
-            direction="up"
+            direction="left"
             in={true}
             mountOnEnter
             unmountOnExit
@@ -64,7 +64,7 @@ export default function TopNews() {
         ))}
         <Slide
           key={-1}
-          direction="up"
+          direction="left"
           in={true}
           mountOnEnter
           unmountOnExit
