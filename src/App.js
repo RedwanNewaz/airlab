@@ -12,6 +12,7 @@ import { homeCardData  } from "./constants/data/homeData";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
+  
   return (
     <div className="App">
       <Router>
