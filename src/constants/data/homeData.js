@@ -1,25 +1,25 @@
 export const homeData = [
   {
     content:
-      "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
+      "Discover the benefits of using robots in various industries such as agriculture, construction, and transportation.",
   },
   {
     content:
-      "Experience the thrill of discovering new ways to harness the power of UAVs in your daily life.",
+      "Experience the thrill of discovering new ways to harness the power of robots in your daily life.",
   },
 ];
 
 export const homeCardData = [
   {
-    title: "UAV Drone",
+    title: "UAV (Drone) Research",
     subtitle:
-      "Unmanned Aerial Vehicle(UAV) are a cutting-edge technology that have the potential to revolutionize various industries.",
-    image: "drone_fleet.png",
+      "How can multiple drones work together to monitor changes in wetlands, farmlands, or areas affected by nuclear incidents?",
+    image: "flying_robots.png",
     primaryContent:
       "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
     secondaryContent: [
       {
-        header: "How it works",
+        header: "How it works", 
         content:
           "UAVs use drone technology to operate autonomously, allowing for safe and efficient delivery of goods, services, and information.",
       },
@@ -43,7 +43,7 @@ export const homeCardData = [
     relatedPublication: [4, 5],
   },
   {
-    title: "UGV Fleet",
+    title: "UGV (Autonomous Car) Research",
     subtitle:
       "The Unmanned Ground Vehicle(UGV) Fleet is a robotic system designed to perform various tasks, such as transportation, logistics, and delivery.",
     image: "ugv_fleet.png",
@@ -65,9 +65,9 @@ export const homeCardData = [
     relatedPublication: [1, 2, 6],
   },
   {
-    title: "Manupulator",
+    title: "Robotic Manupulator (Arm) Research",
     subtitle:
-      "The Manipulator is a robotic system designed to perform various tasks, such as picking and placing objects, navigating through environments, and performing tasks that require complex coordination.",
+      "How can we optimize the Manipulator robot's design and algorithms to improve its performance in object handling, navigation, and complex tasks?",
     image: "manipulator.png",
     primaryContent:
       "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
@@ -87,10 +87,10 @@ export const homeCardData = [
     relatedPublication: [3, 8, 9],
   },
   {
-    title: "AUV Fleet",
+    title: "ASV (Autonomous Boats) Research",
     subtitle:
-      "The AiR Lab aims to develop and implement technologies to enable the creation of Autonomous Underwater Vehicles (AUVs) that can navigate, perceive, and interact with their environment in a safe and efficient manner. ",
-    image: "drone_fleet.png",
+      "How can a team of ASVs work together to create maps of changing water quality conditions in unexplored areas?",
+    image: "asvs.png",
     primaryContent:
       "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
     secondaryContent: [
