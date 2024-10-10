@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect} from "react";
 import { Typography, Box, Stack, Grid2, useMediaQuery } from "@mui/material";
 import { homeData, homeCardData } from "../constants/data/homeData";
 import { heroHome } from "../constants/data/heroImageData";
@@ -11,6 +11,10 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 export default function Home() {
   const topNews = newsData.slice(0, 5);
   const isDesktop = useMediaQuery("(min-width:1280px)"); // For desktop (1280px and higher)
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when this component mounts
+  }, []);
 
   return (
     <Box className="full-height-width flex-column-no-gap">

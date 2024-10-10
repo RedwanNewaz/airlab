@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroContainer from "../components/HeroContainer";
 import { Box, Grid2 } from "@mui/material";
 import { researchData, tags } from "../constants/data/researchData";
@@ -12,6 +12,10 @@ import CustomAutoComplete from "../components/CustomAutoComplete";
 
 export default function Research() {
   const [researchWorks, setResearchWorks] = useState(researchData);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when this component mounts
+  }, []);
 
   const filterResearchByTags = (menuItems) => {
     if (menuItems.length === 0) {

@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   Chip,
 } from "@mui/material";
-import React from "react";
+import {React, useEffect} from "react";
 import RelatedResearchButtons from "../components/RelatedResearchButtons";
 import { publicationData } from "../constants/data/publicationData";
 import { Link } from "react-router-dom";
@@ -15,7 +15,11 @@ import RelatedPublications from "../components/RelatedPublications";
 import RelatedResearchPublication from "../components/RelatedResearchPublication";
 
 export default function About({ aboutData }) {
-  const isMediumScreen = useMediaQuery("(max-width:1280px)"); // Media query for small screens
+  const isMediumScreen = useMediaQuery("(max-width:1280px)"); // Media query for Medium screens
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when this component mounts
+  }, []);
 
   return (
     <div
