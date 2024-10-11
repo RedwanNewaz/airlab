@@ -99,6 +99,7 @@ export default function ResearchDetail({ researchDetail }) {
                       style={{
                         flexGrow: 1, // Allows this div to grow and take available space
                         overflowY: "auto", // Enable vertical scrolling when content overflows
+                        padding: '0 1rem'
                       }}
                     >
                       <RelatedPublications
