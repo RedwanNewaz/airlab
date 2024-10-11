@@ -21,7 +21,7 @@ export default function News() {
     // Scroll to the specific news item using hash
     const hash = location.hash;
     if (hash) {
-      const anchor = document.getElementById(hash.slice(1)); // Remove '#' from hash
+      const anchor = document.getElementById(hash.slice(1)); 
       if (anchor) {
         anchor.scrollIntoView({ behavior: 'smooth', block: 'start',inline: 'nearest'  });
       }

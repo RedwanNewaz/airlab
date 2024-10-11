@@ -4,7 +4,7 @@ import { newsData } from "../constants/data/newsData";
 import { Link } from "react-router-dom";
 
 export default function TopNews() {
-  const topNews = newsData.slice(0, 5);
+  const topNews = (newsData.slice(newsData.length-5, newsData.length)).reverse();
 
   return (
     <Box

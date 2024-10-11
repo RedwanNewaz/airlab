@@ -10,7 +10,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 export default function Home() {
   const topNews = newsData.slice(0, 5);
-  const isDesktop = useMediaQuery("(min-width:1280px)"); // For desktop (1280px and higher)
+  const isLaptop = useMediaQuery("(max-width:1189px)"); // For medium screens (e.g., tablets)
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top when this component mounts
@@ -102,8 +102,10 @@ export default function Home() {
                 columnSpacing={4}
                 rowSpacing={2}
                 width={{ desktop: "90%", laptop: "100%" }}
-                justifyContent={"center"}
+                // justifyContent={isLaptop ? 'center' : 'flex-start'}
+                justifyContent={'center'}
                 alignItems={"center"}
+                marginX={'auto'}
               >
                 {homeCardData &&
                   homeCardData.map((item, index) => (

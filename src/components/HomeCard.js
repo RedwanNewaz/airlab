@@ -25,8 +25,8 @@ export default function HomeCard({ homeCardData }) {
         width: "100%",
         height: "auto",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        // justifyContent: "center",
+        // alignItems: "center",
       }}
     >
       <Card
