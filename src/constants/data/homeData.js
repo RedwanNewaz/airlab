@@ -105,7 +105,7 @@ export const homeCardData = [
           "UAVs have the potential to revolutionize various industries, such as agriculture, construction, and transportation, by enabling safe and efficient delivery of goods, services, and information.",
       },
     ],
-    relatedResearch: [],
-    relatedPublication: [],
+    relatedResearch: [1, 3],
+    relatedPublication: [12, 21, 22, 25, 28, 10],
   },
 ];

@@ -1,28 +1,5 @@
-export const tags = [
-  "Autonomous Systems",
-  "Decentralized Systems",
-  "Gaussian Process",
-  "Spatiotemporal fields",
-  "POMDP",
-  "MCTS",
-  "CSP",
-  "LSTM",
-  "Model Checking",
-  "SMT Solver",
-  "Deep Learning",
-  "Multimodal Sensor Fusion",
-  "Ensemble Learning",
-  "Fiducial Marker Detection",
-  "Pedestrain Detection",
-  "Children with ASD",
-  "Self-taught Robots",
-  "Privacy Preserving Database",
-  "ABA therapy",
-  "Topographic Mapping ",
-  "Source Localization",
-  "Variational Bayesian",
-  "GMM",
-];
+export const tags = ['Autonomous Systems', 'Decentralized Systems', 'Gaussian Process', 'Spatiotemporal fields', 'Deep Learning', 'Multimodal Sensor Fusion', 'Ensemble Learning', 'Fiducial Marker Detection', 'Pedestrain Detection', 'Self-driving Cars', 'Children with ASD', 'Self-taught Robots', 'Privacy Preserving Database', 'ABA therapy', 'Topographic Mapping ', 'Source Localization', 'Variational Bayesian', 'GMM'];
+
 
 export const researchData = [
   {
