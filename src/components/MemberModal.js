@@ -34,17 +34,17 @@ export default function MemberModal({ handleModal, memberData, openModal }) {
         sx={{
           ...style, 
           width: isSmallScreen ? "80%" : "600px", 
-          maxHeight: "90%"
+          maxHeight: "70%"
         }}
       >
-        <Stack spacing={2}>
+        <Stack spacing={2} justifyContent={'center'} alignItems={'center'}>
             <img
               src={
                 memberData.photo
                   ? require(`../assets/images/${memberData.photo}`)
                   : require("../assets/images/profile.png")
               }
-              width={"100%"}
+              width={"50%"}
             />
           <Stack spacing={2}>
             <Typography id="modal-modal-title" variant="h6" component="h2">

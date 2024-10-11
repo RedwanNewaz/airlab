@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Typography from "@mui/material/Typography";
 import { researchData } from "../constants/data/researchData";
+import { useNavigate } from "react-router";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -74,12 +75,17 @@ const ImageMarked = styled("span")(({ theme }) => ({
 }));
 
 export default function RelatedResearchButtons({ researchIds }) {
+  const navigate = useNavigate();
+  
   const relatedResearch = researchIds.map((id, index) =>
     researchData.find((item) => item.id === id)
   );
 
-  const navigateToPage = () => {
+  const navigateToPage = (id) => {
+    const researchDetailData = researchData.find((dict) => dict.id === id);
 
+    console.log(researchDetailData);
+    navigate(`/research/${researchDetailData.title.toLowerCase().replace(/\s/g, "-")}-${researchDetailData.id}`); 
   }
 
   return (

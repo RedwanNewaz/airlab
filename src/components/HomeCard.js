@@ -11,12 +11,12 @@ import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
 export default function HomeCard({ homeCardData }) {
   const isSmallScreen = useMediaQuery("(max-width:600px)"); // For screens smaller than 600px
   const isLaptop = useMediaQuery("(max-width:1189px)"); // For medium screens (e.g., tablets)
-  const isMediumScreen = useMediaQuery('(max-width:900px)'); // For medium screens (e.g., tablets)
+  const isMediumScreen = useMediaQuery("(max-width:900px)"); // For medium screens (e.g., tablets)
 
   const navigate = useNavigate(); // Initialize the navigate function
 
   const navigateToPage = () => {
-    navigate(`/about/${homeCardData.title.toLowerCase().replace(/\s/g, "-")}`); 
+    navigate(`/about/${homeCardData.title.toLowerCase().replace(/\s/g, "-")}`);
   };
 
   return (
@@ -25,14 +25,19 @@ export default function HomeCard({ homeCardData }) {
         width: "100%",
         height: "auto",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        ...(isLaptop && { justifyContent: "center", alignItems: "center" }),
       }}
     >
       <Card
         sx={{
-            width: isSmallScreen ? '90%' : isMediumScreen ? '90%' : isLaptop ? 900: 400, // Adjust width based on screen size
-            height: isSmallScreen ? "auto" : "450px", // Full height on larger screens
+          width: isSmallScreen
+            ? "90%"
+            : isMediumScreen
+            ? "90%"
+            : isLaptop
+            ? 900
+            : 400, // Adjust width based on screen size
+          height: isSmallScreen ? "auto" : "450px", // Full height on larger screens
           display: "flex",
           flexDirection: "column",
         }}
