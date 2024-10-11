@@ -158,7 +158,7 @@ export default function ResearchDetail({ researchDetail }) {
                 <Typography
                   key={index}
                   variant="body1"
-                  sx={{ color: "rgb(60, 60, 60)", lineHeight: 1.8 }} // Improved line height for readability
+                  sx={{ color: "rgb(60, 60, 60)", lineHeight: 1.8, textAlign: "left" }} // Improved line height for readability
                 >
                   {desc}
                 </Typography>
