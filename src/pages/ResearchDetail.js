@@ -20,120 +20,122 @@ export default function ResearchDetail({ researchDetail }) {
     >
       <Stack spacing={10} alignItems="center" width="100%">
         {/* Image and Related Publications Grid2 */}
-        {researchDetail.relatedPublication && <Grid2
-          container
-          spacing={2}
-          sx={{
-            width: "90%",
-            height: "100%", // Subtracting 40px for the padding at the top
-            borderRadius: "16px",
-            overflow: "hidden",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)", // Slightly stronger shadow
-            backgroundColor: "#ffffff",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {/* Image Section */}
+        {researchDetail.relatedPublication && (
           <Grid2
-            size={{ xs: 12, md: 6 }}
+            container
+            spacing={2}
             sx={{
-              display: "flex",
+              width: "90%",
+              height: "100%", // Subtracting 40px for the padding at the top
+              borderRadius: "16px",
+              overflow: "hidden",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)", // Slightly stronger shadow
+              backgroundColor: "#ffffff",
               justifyContent: "center",
               alignItems: "center",
+            }}
+          >
+            {/* Image Section */}
+            <Grid2
+              size={{ xs: 12, md: 6 }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={require(`../assets/images/${researchDetail.image}`)}
+                alt={researchDetail.title}
+                style={{
+                  width: "95%",
+                  height: "calc(60vh)",
+                  objectFit: "cover",
+                  borderRadius: "16px",
+                }}
+              />
+            </Grid2>
+
+            <Grid2
+              size={{ xs: 12, md: 6 }}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+              }}
+            >
+              {researchDetail.relatedPublication && (
+                <Box
+                  sx={{
+                    backgroundColor: "#ffffff",
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                    height: "80%", // Ensure Box fills the height of Grid2
+                    border: "1px solid #e0e0e0",
+                    p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    m: 5,
+                    maxHeight: "calc(50vh)", // Maximum height based on the height of the parent
+                  }}
+                >
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                    sx={{
+                      py: "0.5rem",
+                      fontWeight: "bold",
+                      color: "#2C3E50",
+                      textAlign: "center",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Related Publications
+                  </Typography>
+
+                  {researchDetail.relatedPublication &&
+                    researchDetail.relatedPublication.length > 0 && (
+                      <div
+                        style={{
+                          flexGrow: 1, // Allows this div to grow and take available space
+                          overflowY: "auto", // Enable vertical scrolling when content overflows
+                          padding: "0 1rem",
+                        }}
+                      >
+                        <RelatedPublications
+                          pubIds={researchDetail.relatedPublication}
+                        />
+                      </div>
+                    )}
+                </Box>
+              )}
+            </Grid2>
+          </Grid2>
+        )}
+
+        {!researchDetail.relatedPublication && (
+          <div
+            style={{
+              width: "100%",
+              maxWidth: "900px",
+              overflow: "hidden",
+              borderRadius: "16px",
+              marginTop: "2rem",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             }}
           >
             <img
               src={require(`../assets/images/${researchDetail.image}`)}
               alt={researchDetail.title}
               style={{
-                width: "95%",
-                height: "calc(60vh)",
+                width: "100%",
+                height: "auto",
                 objectFit: "cover",
                 borderRadius: "16px",
               }}
             />
-          </Grid2>
-
-          <Grid2
-            size={{ xs: 12, md: 6 }}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100%",
-            }}
-          >
-            {researchDetail.relatedPublication && (
-              <Box
-                sx={{
-                  backgroundColor: "#ffffff",
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                  height: "80%", // Ensure Box fills the height of Grid2
-                  border: "1px solid #e0e0e0",
-                  p: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  m: 5,
-                  maxHeight: "calc(50vh)", // Maximum height based on the height of the parent
-                }}
-              >
-                <Typography
-                  variant="h5"
-                  gutterBottom
-                  sx={{
-                    py: "0.5rem",
-                    fontWeight: "bold",
-                    color: "#2C3E50",
-                    textAlign: "center",
-                    cursor: "pointer",
-                  }}
-                >
-                  Related Publications
-                </Typography>
-
-                {researchDetail.relatedPublication &&
-                  researchDetail.relatedPublication.length > 0 && (
-                    <div
-                      style={{
-                        flexGrow: 1, // Allows this div to grow and take available space
-                        overflowY: "auto", // Enable vertical scrolling when content overflows
-                        padding: '0 1rem'
-                      }}
-                    >
-                      <RelatedPublications
-                        pubIds={researchDetail.relatedPublication}
-                      />
-                    </div>
-                  )}
-              </Box>
-            )}
-          </Grid2>
-        </Grid2>}
-
-        {!researchDetail.relatedPublication  && (
-          <div
-          style={{
-            width: "100%",
-            maxWidth: "900px",
-            overflow: "hidden",
-            borderRadius: "16px",
-            marginTop: "2rem",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          <img
-              src={require(`../assets/images/${researchDetail.image}`)}
-              alt={researchDetail.title}
-            style={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover",
-              borderRadius: "16px",
-            }}
-          />
-        </div>
+          </div>
         )}
 
         {/* Research Details Section */}
@@ -259,12 +261,21 @@ export default function ResearchDetail({ researchDetail }) {
                                     >
                                       {point.header}
                                     </Typography>
-                                    <Typography
-                                      variant="body2"
-                                      sx={{ color: "#586262" }}
-                                    >
-                                      {point.description}
-                                    </Typography>
+                                    <Stack columnGap={0.5}>
+                                      {point.description &&
+                                        point.description.length > 0 &&
+                                        point.description.map(
+                                          (desc, index) => (
+                                            <Typography
+                                              key={index}
+                                              variant="body2"
+                                              sx={{ color: "#586262" }}
+                                            >
+                                              {desc}
+                                            </Typography>
+                                          )
+                                        )}
+                                    </Stack>
                                   </Box>
                                 ))}
                               </Box>
