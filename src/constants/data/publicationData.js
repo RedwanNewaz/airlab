@@ -99,7 +99,7 @@ export const publicationData = [
       "Chaudhuri, Swarat",
       "Kavraki, Lydia E"
     ],
-    "journal": "No journal or booktitle available",
+    "journal": "Robotics Science and Systems",
     "bibtex": "@article{newaz2019monte,\n      title={Monte-Carlo Policy Synthesis in POMDPs with Quantitative and Qualitative Objectives},\n      author={Newaz, Abdullah Al Redwan and Chaudhuri, Swarat and Kavraki, Lydia E},\n      journal={No journal or booktitle available},\n      year={2019},\n      publisher={Unknown}\n    }",
     "abstract": "No abstract available"
   },
