@@ -9,7 +9,9 @@ import Footer from "./components/Footer";
 import News from "./pages/News";
 import About from "./pages/About";
 import { homeCardData  } from "./constants/data/homeData";
+import { researchData } from "./constants/data/researchData";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import ResearchDetail from "./pages/ResearchDetail";
 
 function App() {
   
@@ -29,6 +31,12 @@ function App() {
               const path = item.title.toLowerCase().replace(/\s/g, "-"); // Converting spaces to hyphens for URL path
               return (
                 <Route key={index} path={`/about/${path}`} element={<About aboutData={item}/>} />
+              )
+            })}
+            {researchData && researchData.map((item, index) => {
+              const pathTitle = item.title.toLowerCase().replace(/\s/g, "-"); // Converting spaces to hyphens for URL path
+              return (
+                <Route key={index} path={`/research/${pathTitle}-${item.id}`} element={<ResearchDetail researchDetail={item}/>} />
               )
             })}
           </Routes>

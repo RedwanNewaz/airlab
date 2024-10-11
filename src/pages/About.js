@@ -7,15 +7,17 @@ import {
   useMediaQuery,
   Chip,
 } from "@mui/material";
-import {React, useEffect} from "react";
-import RelatedResearchButtons from "../components/RelatedResearchButtons";
-import { publicationData } from "../constants/data/publicationData";
-import { Link } from "react-router-dom";
-import RelatedPublications from "../components/RelatedPublications";
+import { React, useEffect } from "react";
 import RelatedResearchPublication from "../components/RelatedResearchPublication";
 
 export default function About({ aboutData }) {
   const isMediumScreen = useMediaQuery("(max-width:1280px)"); // Media query for Medium screens
+
+  const relatedResearchPublicationExists =
+    aboutData.relatedResearch &&
+    aboutData.relatedResearch.length > 0 &&
+    aboutData.relatedPublication &&
+    aboutData.relatedPublication.length;
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top when this component mounts
@@ -69,7 +71,9 @@ export default function About({ aboutData }) {
         >
           <Grid2 container spacing={2} width={"90%"}>
             {/* Title and Primary Content */}
-            <Grid2 size={isMediumScreen ? 12 : 6}>
+            <Grid2
+              size={isMediumScreen || !relatedResearchPublicationExists ? 12 : 6}
+            >
               <Stack spacing={2} paddingBottom={"2rem"}>
                 <Stack spacing={2}>
                   <Typography variant="h3" color="#2C3E50">

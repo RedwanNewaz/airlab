@@ -8,10 +8,16 @@ import Grid2 from "@mui/material/Grid2";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { useMediaQuery } from '@mui/material';
+import { useNavigate } from'react-router-dom'; 
 
 
 export default function ResearchCard({ researchData }) {
   const isSmallScreen = useMediaQuery('(max-width:600px)'); // Media query for small screens
+  const navigate = useNavigate(); 
+
+  const navigateToResearchDetail = () => {
+    navigate(`/research/${researchData.title.toLowerCase().replace(/\s/g, "-")}-${researchData.id}`); 
+  }
 
   return (
     <div style={{ width: '100%', height: '500px', display:"flex", justifyContent:"center", alignItems:'center'}}>
@@ -32,6 +38,7 @@ export default function ResearchCard({ researchData }) {
             width: "100%",
             height: "100%",
           }}
+          onClick={navigateToResearchDetail}
         >
         <CardMedia
             component="img"
@@ -52,7 +59,7 @@ export default function ResearchCard({ researchData }) {
                   {researchData.desc}
                 </Typography>
               </Grid2>
-              <Grid2 size={12} sx={2}>
+              <Grid2 size={12}>
                 <Stack
                   direction="row"
                   rowGap={1}

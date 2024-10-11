@@ -106,6 +106,6 @@ export const homeCardData = [
       },
     ],
     relatedResearch: [],
-    relatedPublication: [6],
+    relatedPublication: [],
   },
 ];

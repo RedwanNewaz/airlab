@@ -44,6 +44,92 @@ export const researchData = [
     tags: ["POMDP", "MCTS", "CSP", "LSTM", "Model Checking", "SMT Solver"],
     // publishedDate: '3 September 2024',
     image: "rl.png",
+    relatedPublication: [
+      2, 3, 5, 9, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+    ],
+    longDesc: [
+      "Constrained Reinforcement Learning (CRL) is a branch of reinforcement learning focused on finding optimal policies that not only maximize rewards but also satisfy specific constraints, such as safety or resource limits. In many real-world applications like autonomous vehicles, robotics, or healthcare systems, agents must operate under constraints to ensure safe and reliable performance. These constraints can be probabilistic, meaning the agent must respect them with a certain probability, especially in environments where outcomes are uncertain or dynamic. CRL formalizes this challenge by using Constrained Markov Decision Processes (CMDPs), allowing agents to balance reward maximization with constraint satisfaction.",
+      "CRL algorithms employ various techniques to handle constraints, including Lagrangian-based methods, primal-dual optimization, and safe exploration strategies. These approaches ensure that agents can explore and learn effectively while maintaining performance within acceptable safety margins. CRL has become particularly important in domains where safety is paramount, such as autonomous navigation or decision-making in critical systems, where violating constraints can lead to catastrophic outcomes. The balance between learning, reward optimization, and constraint handling under uncertainty is what makes CRL a challenging and vital area of research.",
+    ],
+    concludingParagraph: ['This is the concluding paragraph of the first research paper on CRL.', 'This paper explores various techniques to handle constraints in CRL, including Lagrangian-based methods, primal-dual optimization, and safe'],
+    details: [
+      {
+        header: "Introduction to the problem",
+        content: {
+          bulletPoint: [],
+          paragraph: [
+            "In Constrained Reinforcement Learning (CRL), the challenge is to develop agents that can learn optimal policies while adhering to certain constraints, especially under uncertainty. Traditional reinforcement learning aims at maximizing cumulative rewards, but in many real-world applications like autonomous systems, robotics, and healthcare, agents must also respect safety or performance constraints. These constraints can be expressed probabilistically to ensure safe operation under uncertainties. The problem arises from the need to balance the trade-off between optimizing for reward and meeting constraints in environments where the dynamics are not fully known or are stochastic.",
+            "In CRL, the complexity is heightened by the inherent uncertainties in the environment, where outcomes are often unpredictable or partially observable. Agents not only have to learn the optimal actions but also need to consider the probabilistic nature of constraints such as safety margins, resource limits, or performance thresholds.",
+          ],
+        },
+      },
+      {
+        header: "Solution Approach",
+        content: {
+          bulletPoint: [
+            {
+              beforePointsParagraph: [
+                "The solution approach in CRL typically involves formulating the problem as a Constrained Markov Decision Process (CMDP), where the agent seeks to maximize expected rewards while keeping the expected cost of violating constraints below a specified threshold.",
+                "A few common approaches include:",
+              ],
+              points: [
+                {
+                  header: "Lagrangian-based methods",
+                  description: [
+                    "These methods convert the constrained problem into an unconstrained one by incorporating the constraints into the reward function using Lagrange multipliers. The agent learns both the policy and the optimal multiplier value to balance the reward maximization and constraint satisfaction.",
+                  ],
+                },
+                {
+                  header: "Primal-dual methods",
+                  description: [
+                    "These are iterative optimization methods where the agent alternates between updating the policy (primal) and the constraint multipliers (dual) to satisfy both objectives over time.",
+                  ],
+                },
+                {
+                  header: "Safe exploration techniques",
+                  description: [
+                    "These ensure that during the learning process, the agent respects constraints, even under uncertainties.",
+                    "Model-based methods can be employed where the agent learns an approximate model of the environment and uses it to plan trajectories that probabilistically guarantee constraint satisfaction.",
+                  ],
+                },
+              ],
+            },
+          ],
+          paragraph: [],
+        },
+      },
+      {
+        header: "Evaluation",
+        content: {
+          bulletPoint: [
+            {
+              beforePointsParagraph: [
+                "The evaluation of CRL methods focuses on measuring two key aspects:",
+              ],
+              points: [
+                {
+                  header: "Performance (Reward)",
+                  description: [
+                    "This is evaluated based on the agent's ability to maximize cumulative rewards, similar to traditional reinforcement learning.",
+                  ],
+                },
+                {
+                  header: "Safety",
+                  description: [
+                    "Constraint violation rate: How often or how severely the agent violates the constraints.",
+                    "Probabilistic guarantees: Whether the agent satisfies constraints with a high probability, especially under uncertainties in the environment dynamics.",
+                  ],
+                },
+              ],
+            },
+          ],
+          paragraph: [
+            "Evaluation is often done through simulation or real-world testing in domains like robotics, autonomous driving, or resource allocation, where safety and performance are critical. Performance comparisons may include baselines like unconstrained RL algorithms or CRL algorithms with different methods of constraint handling (e.g., Lagrangian vs. chance-constrained approaches).",
+            "This ensures that CRL methods not only achieve high rewards but do so while meeting predefined safety or operational constraints under uncertainty, making them suitable for critical applications.",
+          ],
+        },
+      },
+    ],
   },
   {
     id: 3,

@@ -3,16 +3,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { publicationData } from "../constants/data/publicationData";
 
-export default function RelatedPublications({ pubIds }) {
-    const relatedPublication =
+export default function RelatedPublications({ pubIds, overflow=false }) {
+  const relatedPublication =
     pubIds && pubIds.length > 0
-      ? pubIds.map((id) =>
-          publicationData.find((item) => item.id === id)
-        )
+      ? pubIds.map((id) => publicationData.find((item) => item.id === id))
       : [];
 
   return (
-    <Stack>
+    <Stack
+      sx={{
+        height: "80%",
+        ...(overflow && {
+          overflowY: "scroll",
+          overflowX: "hidden",
+        }),
+      }}
+    >
       {relatedPublication.map((pubItem, index) => (
         <Link
           key={pubItem.id}
@@ -23,7 +29,6 @@ export default function RelatedPublications({ pubIds }) {
             variant="outlined"
             sx={{
               width: "100%",
-              textAlign: "left",
               padding: "10px",
               borderRadius: "8px",
               backgroundColor: "#ECF0F1",
