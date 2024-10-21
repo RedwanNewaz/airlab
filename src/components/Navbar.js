@@ -25,7 +25,9 @@ const pages = [
   { id: 3, path: "/research", label: "Research" },
   { id: 4, path: "/Publication", label: "Publication" },
   { id: 5, path: "/news", label: "News" },
-  { id: 6, path: "/contact", label: "Contact" },
+  { id: 6, path: "/video", label: "Videos" },
+  { id: 7, path: "/contact", label: "Contact" },
+
 ];
 
 export default function Navbar() {

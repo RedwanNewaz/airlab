@@ -28,3 +28,9 @@ export const heroContact = {
   title: "Contact",
   subtitle: "Get in touch with us to talk about Robotics",
 };
+
+export const heroVideo = {
+  id: "hero-video",
+  title: "Video",
+  subtitle: "Watch our latest videos",
+}
