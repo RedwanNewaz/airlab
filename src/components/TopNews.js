@@ -43,7 +43,7 @@ export default function TopNews() {
             style={{padding: "0 2rem"}}
           >
             <Link
-              to={`/news#news-item-${index}`}
+              to={`/airlab/news#news-item-${index}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
               <Typography

@@ -20,14 +20,13 @@ import "../constants/styles.css";
 import { useLocation } from "react-router-dom";
 
 const pages = [
-  { id: 1, path: "/", label: "Home" },
-  { id: 2, path: "/team", label: "Team" },
-  { id: 3, path: "/research", label: "Research" },
-  { id: 4, path: "/Publication", label: "Publication" },
-  { id: 5, path: "/news", label: "News" },
-  { id: 6, path: "/video", label: "Videos" },
-  { id: 7, path: "/contact", label: "Contact" },
-
+  { id: 1, path: "/airlab", label: "Home" },
+  { id: 2, path: "/airlab/team", label: "Team" },
+  { id: 3, path: "/airlab/research", label: "Research" },
+  { id: 4, path: "/airlab/Publication", label: "Publication" },
+  { id: 5, path: "/airlab/news", label: "News" },
+  { id: 6, path: "/airlab/video", label: "Videos" },
+  { id: 7, path: "/airlab/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

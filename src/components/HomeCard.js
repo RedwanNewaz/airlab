@@ -16,7 +16,7 @@ export default function HomeCard({ homeCardData }) {
   const navigate = useNavigate(); // Initialize the navigate function
 
   const navigateToPage = () => {
-    navigate(`/about/${homeCardData.title.toLowerCase().replace(/\s/g, "-")}`);
+    navigate(`/airlab/about/${homeCardData.title.toLowerCase().replace(/\s/g, "-")}`);
   };
 
   return (

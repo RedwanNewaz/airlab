@@ -22,7 +22,7 @@ export default function RelatedPublications({ pubIds, overflow=false }) {
       {relatedPublication.map((pubItem, index) => (
         <Link
           key={pubItem.id}
-          to={`/publication#publication-item-${pubItem.id}`}
+          to={`/airlab/publication#publication-item-${pubItem.id}`}
           style={{ textDecoration: "none", color: "inherit" }}
         >
           <Button

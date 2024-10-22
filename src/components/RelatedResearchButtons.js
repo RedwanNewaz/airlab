@@ -84,8 +84,7 @@ export default function RelatedResearchButtons({ researchIds }) {
   const navigateToPage = (id) => {
     const researchDetailData = researchData.find((dict) => dict.id === id);
 
-    console.log(researchDetailData);
-    navigate(`/research/${researchDetailData.title.toLowerCase().replace(/\s/g, "-")}-${researchDetailData.id}`); 
+    navigate(`/airlab/research/${researchDetailData.title.toLowerCase().replace(/\s/g, "-")}-${researchDetailData.id}`); 
   }
 
   return (

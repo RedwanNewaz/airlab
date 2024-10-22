@@ -16,7 +16,7 @@ export default function ResearchCard({ researchData }) {
   const navigate = useNavigate(); 
 
   const navigateToResearchDetail = () => {
-    navigate(`/research/${researchData.title.toLowerCase().replace(/\s/g, "-")}-${researchData.id}`); 
+    navigate(`/airlab/research/${researchData.title.toLowerCase().replace(/\s/g, "-")}-${researchData.id}`); 
   }
 
   return (

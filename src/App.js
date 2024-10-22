@@ -10,7 +10,7 @@ import News from "./pages/News";
 import About from "./pages/About";
 import { homeCardData  } from "./constants/data/homeData";
 import { researchData } from "./constants/data/researchData";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import ResearchDetail from "./pages/ResearchDetail";
 import Video from "./pages/Video";
 
@@ -22,25 +22,26 @@ function App() {
         <Navbar />
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/research" element={<Research />} />
-            <Route path="/publication" element={<Publication />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Navigate to="/airlab" Home />} />
+            <Route path="/airlab" element={<Home />} />
+            <Route path="/airlab/team" element={<Team />} />
+            <Route path="/airlab/research" element={<Research />} />
+            <Route path="/airlab/publication" element={<Publication />} />
+            <Route path="/airlab/news" element={<News />} />
+            <Route path="/airlab/contact" element={<Contact />} />
             {homeCardData && homeCardData.map((item,index) => {
               const path = item.title.toLowerCase().replace(/\s/g, "-"); // Converting spaces to hyphens for URL path
               return (
-                <Route key={index} path={`/about/${path}`} element={<About aboutData={item}/>} />
+                <Route key={index} path={`/airlab/about/${path}`} element={<About aboutData={item}/>} />
               )
             })}
             {researchData && researchData.map((item, index) => {
               const pathTitle = item.title.toLowerCase().replace(/\s/g, "-"); // Converting spaces to hyphens for URL path
               return (
-                <Route key={index} path={`/research/${pathTitle}-${item.id}`} element={<ResearchDetail researchDetail={item}/>} />
+                <Route key={index} path={`/airlab/research/${pathTitle}-${item.id}`} element={<ResearchDetail researchDetail={item}/>} />
               )
             })}
-            (<Route path="/video" element={<Video />} />)
+            (<Route path="airlab/video" element={<Video />} />)
           </Routes>
         </div>
         <Footer />
