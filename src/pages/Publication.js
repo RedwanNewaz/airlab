@@ -1,11 +1,19 @@
 import { React, useEffect, useState } from "react";
 import HeroContainer from "../components/HeroContainer";
-import { Box, Stack, Chip, Paper, Typography, Grid2, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Stack,
+  Chip,
+  Paper,
+  Typography,
+  Grid2,
+  useMediaQuery,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { publicationData, years } from "../constants/data/publicationData";
 import SelectInput from "../components/SelectInput";
 import { heroPublication } from "../constants/data/heroImageData";
-import { useLocation } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 const ChipPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -28,17 +36,16 @@ export default function Publication() {
       if (hash) {
         const element = document.getElementById(hash.substring(1)); // Get element by id
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }
     };
 
     // Using setTimeout to ensure that the DOM is fully rendered before scrolling
-    const timeoutId = setTimeout(scrollToHash, 0); 
+    const timeoutId = setTimeout(scrollToHash, 0);
 
     return () => clearTimeout(timeoutId); // Cleanup timeout on unmount
   }, [location]);
-
 
   const handleOpenBibtex = (id) => {
     setOpenAbstract(null);
@@ -84,15 +91,18 @@ export default function Publication() {
 
   return (
     <div className="full-height-width flex-column-no-gap">
-      <HeroContainer title={heroPublication.title} subtitle={heroPublication.subtitle} />
+      <HeroContainer
+        title={heroPublication.title}
+        subtitle={heroPublication.subtitle}
+      />
 
-      <Stack 
-        marginX={"auto"} 
-        marginTop={{ xs: "4%", sm: "2%" }} 
-        direction={"row"} 
-        justifyContent="center" 
-        alignItems="center" 
-        spacing={4} 
+      <Stack
+        marginX={"auto"}
+        marginTop={{ xs: "4%", sm: "2%" }}
+        direction={"row"}
+        justifyContent="center"
+        alignItems="center"
+        spacing={4}
         width="80%"
       >
         <SelectInput
@@ -102,8 +112,8 @@ export default function Publication() {
           saveMenuItems={filterPublications}
         />
       </Stack>
-      <Box sx={{ px: { xs: "3%", sm: "10%" }, py: '5%', maxWidth: '90vw'}}>
-        <Grid2 maxWidth={'100%'} container spacing={3} direction="column">
+      <Box sx={{ px: { xs: "3%", sm: "10%" }, py: "5%", maxWidth: "90vw" }}>
+        <Grid2 maxWidth={"100%"} container spacing={3} direction="column">
           {Object.keys(publications)
             .sort((a, b) => b - a)
             .map((year) => (
@@ -142,24 +152,33 @@ export default function Publication() {
                     >
                       <Typography
                         variant="h6"
-                        sx={{ fontWeight: "bold", fontSize: { xs: "1rem", sm: "1.25rem" } }}
+                        sx={{
+                          fontWeight: "bold",
+                          fontSize: { xs: "1rem", sm: "1.25rem" },
+                        }}
                       >
                         {index + 1}. {pub.title}
                       </Typography>
                       <Typography
                         variant="body2"
-                        sx={{ color: "#616161", fontSize: { xs: "0.85rem", sm: "1rem" } }}
+                        sx={{
+                          color: "#616161",
+                          fontSize: { xs: "0.85rem", sm: "1rem" },
+                        }}
                       >
                         Authors: {pub.authors.join(", ")}
                       </Typography>
                       <Typography
                         variant="body2"
-                        sx={{ fontStyle: "italic", fontSize: { xs: "0.85rem", sm: "1rem" } }}
+                        sx={{
+                          fontStyle: "italic",
+                          fontSize: { xs: "0.85rem", sm: "1rem" },
+                        }}
                       >
                         {pub.journal}
                       </Typography>
 
-                      <Stack direction='row' spacing={2} alignItems={"center"}>
+                      <Stack direction="row" spacing={2} alignItems={"center"}>
                         <Chip
                           label="BibTeX"
                           color="primary"
@@ -174,27 +193,59 @@ export default function Publication() {
                           onClick={() => handleOpenAbstract(pub.id)}
                           sx={{ cursor: "pointer" }}
                         />
-                        <Chip
-                          label="Link"
-                          color="secondary"
-                          size="small"
-                          onClick={() => {
-                            window.open(pub.link, "_blank", "noopener,noreferrer");
-                          }}
-                          sx={{ cursor: "pointer" }}
-                        />
+                        {pub.link && pub.link !== "No link available" && (
+                          <Chip
+                            label="Link"
+                            color="secondary"
+                            size="small"
+                            onClick={() => {
+                              window.open(
+                                pub.link,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            }}
+                            sx={{ cursor: "pointer" }}
+                          />
+                        )}
+
+                        {pub.pdf && (
+                          <Chip
+                            label="PDF"
+                            color="secondary"
+                            size="small"
+                            onClick={() => {
+                              window.open(
+                                pub.pdf,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            }}
+                            sx={{ cursor: "pointer" }}
+                          />
+                        )}
                       </Stack>
 
                       {openBibtex === pub.id && (
                         <ChipPaper variant="outlined">
-                          <pre style={{whiteSpace: "pre-wrap", wordWrap: "break-word"}}>{pub.bibtex}</pre>
+                          <pre
+                            style={{
+                              whiteSpace: "pre-wrap",
+                              wordWrap: "break-word",
+                            }}
+                          >
+                            {pub.bibtex}
+                          </pre>
                         </ChipPaper>
                       )}
                       {openAbstract === pub.id && (
                         <ChipPaper variant="outlined">
                           <Typography
                             variant="body2"
-                            sx={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
+                            sx={{
+                              whiteSpace: "pre-wrap",
+                              wordWrap: "break-word",
+                            }}
                           >
                             {pub.abstract}
                           </Typography>
