@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import {
-  Stack,
   Box,
   Toolbar,
   Menu,
@@ -13,8 +12,6 @@ import {
   Avatar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
-import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
 import "../constants/styles.css";
 import { useLocation } from "react-router-dom";
@@ -27,6 +24,7 @@ const pages = [
   { id: 5, path: "/news", label: "News" },
   { id: 6, path: "/video", label: "Videos" },
   { id: 7, path: "/contact", label: "Contact" },
+  { id: 8, path: "https://research-dashboard-pied.vercel.app/", label: "Research Dashboard"}
 
 ];
 
@@ -111,7 +109,6 @@ export default function Navbar() {
             </Menu>
           </Box>
 
-          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
             <Avatar
               alt="Air Lab Logo"
               src={require("../assets/images/airlab-logo.png")}
@@ -142,7 +139,6 @@ export default function Navbar() {
             >
               AIRLAB
             </Typography>
-          {/* </Stack> */}
 
           <Box
             sx={{
@@ -155,6 +151,8 @@ export default function Navbar() {
               <Button
                 key={page.id}
                 component={Link}
+                target={page.path.startsWith('http') ? "_blank": null}
+                rel={page.path.startsWith('http') ? "noopener noreferrer" : null}
                 to={page.path}
                 sx={{
                   my: 2,
