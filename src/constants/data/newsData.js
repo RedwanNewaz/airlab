@@ -28,12 +28,6 @@ export const newsData = [
         title: "Ubiquitous Robots 2024 Papers",
         content: "Two papers got accepted to  International Conference on Ubiquitous Robots, 2024, Adaptive Dynamic Window Approach for Robot Navigation in Disturbance Vector Fields, and Randomized Multi-Robot Patrolling with Unidirectional Visibility.",
         date: "FEB 2024",
-    },
-    {
-        id: 6,
-        title: "Ubiquitous Robots 2024 Papers",
-        content: "Two papers got accepted to  International Conference on Ubiquitous Robots, 2024, Adaptive Dynamic Window Approach for Robot Navigation in Disturbance Vector Fields, and Randomized Multi-Robot Patrolling with Unidirectional Visibility.",
-        date: "FEB 2024",
-    }  
+    }
   
 ]
