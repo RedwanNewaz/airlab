@@ -1,7 +1,7 @@
 export const videoData = [
   {
     id: 1,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "cMlFKEKsPFQ?si=8vNIleJ0nx33Qz38",
   },
   {
     id: 2,
@@ -9,22 +9,22 @@ export const videoData = [
   },
   {
     id: 3,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "veAn3cPlluQ?si=2RUebLkoZqAtSSrI",
   },
   {
     id: 4,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "bXWyC0TpOSM?si=rUqI2EG_7pTkwJn6",
   },
   {
     id: 5,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "bXWyC0TpOSM?si=hJFGrddbuddCPc2G",
   },
   {
     id: 6,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "cFBSGvqrWKY?si=ojtX4TzZR3gEyBD3",
   },
   {
     id: 7,
-    videoId: "GICmRczUEis?si=fRkedTKgbBofb9zP",
+    videoId: "CajkI87aEW8?si=MXiiY0JXZ-BysMBG",
   },
 ];

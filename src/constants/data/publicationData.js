@@ -468,7 +468,7 @@ export const publicationData = [
     id: 28,
     title:
       "LCD-RIG: Limited Communication Decentralized Robotic Information Gathering Systems",
-    year: "2024",
+    year: "2025",
     link: "https://ieeexplore.ieee.org/document/10693516",
     authors: [
       "Newaz, Abdullah Al Redwan",
@@ -483,7 +483,23 @@ export const publicationData = [
       "@article{newaz2024lcd,\n      title={LCD-RIG: Limited Communication Decentralized Robotic Information Gathering Systems},\n      author={Newaz, Abdullah Al Redwan and Padrao, Paulo and Fuentes, Jose and Alam, Tauhidul and Govindarajan, Ganesh and Bobadilla, Leonardo},\n      journal={IEEE Robotics and Automation Letters},\n      year={2024},\n      publisher={IEEE}\n    }",
     abstract:
       "Effective data collection in collaborative information-gathering systems relies heavily on maintaining uninterrupted connectivity. Yet, real-world communication disruptions often pose challenges to information-gathering processes. To address this issue, we introduce a novel method —a limited communication decentralized information gathering system for multiple robots to explore environmental phenomena characterized as unknown spatial fields. Our method leverages quadtree structures to ensure comprehensive workspace coverage and efficient exploration. Unlike traditional systems that depend on global and synchronous communication, our method enables robots to share local experiences within a limited transmission range and coordinate their tasks through pairwise and asynchronous communication. Information estimation is facilitated by a Gaussian Process with an Attentive Kernel, allowing adaptive capturing of crucial behavior and data patterns. Our proposed system is validated through simulated scalar field studies in non-stationary environments where multiple robots explore spatial fields. Theoretical guarantees ensure the convergence of distributed area coverage and the regret bounds of distributed online scalar field mapping. We also validate our method empirically in a water quality monitoring scenario featuring three Autonomous Surface Vehicles, tasked with constructing a spatial field.",
-  },
+    link: "https://ieeexplore.ieee.org/document/10693516"
+    },
+    {
+      id: 29,
+      title:
+        "Learning-based Adaptive Navigation for Scalar Field Mapping and Feature Tracking",
+      year: "2025",
+      authors: [
+        "Fuentes, Jose",
+        "Padrao, Paulo",
+        "Newaz, Abdullah Al Redwan",
+        "Bobadilla, Leonardo",
+      ],
+      journal: "IEEE International Conference on Robotics and Automation",
+      abstract:
+        "Scalar field features such as extrema, contours, and saddle points are essential for applications in environmental monitoring, search and rescue, and resource exploration. Traditional navigation methods often rely on predefined trajectories, leading to inefficient and resource-intensive mapping. This paper introduces a new adaptive navigation framework that leverages learning techniques to enhance exploration efficiency and effectiveness in scalar fields, even under noisy data and obstacles. The framework employs Partial Differential Equations to model scalar fields and a Gaussian Process Regressor to estimate the fields and their gradients, enabling real-time path adjustments and obstacle avoidance. We provide a theoretical foundation for the approach and address several limitations found in existing methods. The effectiveness of our framework is demonstrated through simulation benchmarks and field experiments with an Autonomous Surface Vehicle, showing improved efficiency and adaptability compared to traditional methods and offering a robust solution for real-time environmental monitoring.",
+      },
 ];
 
 export const years = [
@@ -496,4 +512,5 @@ export const years = [
   "2022",
   "2023",
   "2024",
+  "2025"
 ];
