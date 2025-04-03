@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { React, useEffect } from "react";
 import RelatedResearchPublication from "../components/RelatedResearchPublication";
+import VideoBox from "../components/VideoBox";
 
 export default function About({ aboutData }) {
   const isMediumScreen = useMediaQuery("(max-width:1280px)"); // Media query for Medium screens
@@ -41,7 +42,7 @@ export default function About({ aboutData }) {
       >
         <div
           style={{
-            width: "100%",
+            width: "90%",
             maxWidth: "900px",
             overflow: "hidden",
             borderRadius: "16px",
@@ -53,13 +54,28 @@ export default function About({ aboutData }) {
             src={require(`../assets/images/${aboutData.image}`)}
             alt={aboutData.title}
             style={{
-              width: "100%",
-              height: "auto",
+              width: "95%",
+              height: "calc(60vh)",
               objectFit: "cover",
               borderRadius: "16px",
             }}
           />
         </div>
+
+       {aboutData.relatedVideos && aboutData.relatedVideos.length > 0 && ( <Box
+          sx={{
+            width: "100%",
+            maxWidth: "1200px", // Limiting the VideoBox width
+            overflowX: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "0 auto", // Center the box
+            padding: { xs: "0px", md: "24px" }, // Responsive padding
+          }}
+        >
+          <VideoBox aboutData={aboutData} />
+        </Box>)}
 
         <Box
           sx={{
@@ -72,7 +88,9 @@ export default function About({ aboutData }) {
           <Grid2 container spacing={2} width={"90%"}>
             {/* Title and Primary Content */}
             <Grid2
-              size={isMediumScreen || !relatedResearchPublicationExists ? 12 : 6}
+              size={
+                isMediumScreen || !relatedResearchPublicationExists ? 12 : 6
+              }
             >
               <Stack spacing={2} paddingBottom={"2rem"}>
                 <Stack spacing={2}>

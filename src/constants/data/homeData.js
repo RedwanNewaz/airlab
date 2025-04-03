@@ -19,7 +19,7 @@ export const homeCardData = [
       "Discover the benefits of using UAVs in various industries such as agriculture, construction, and transportation.",
     secondaryContent: [
       {
-        header: "How it works", 
+        header: "How it works",
         content:
           "UAVs use drone technology to operate autonomously, allowing for safe and efficient delivery of goods, services, and information.",
       },
@@ -30,14 +30,14 @@ export const homeCardData = [
       },
     ],
     links: [
-        {
-            label: "Github",
-            href: "https://github.com/",
-        },
-        {
-            label: "Website",
-            href: "https://arxiv.org/abs/2409.02334",
-        },
+      {
+        label: "Github",
+        href: "https://github.com/",
+      },
+      {
+        label: "Website",
+        href: "https://arxiv.org/abs/2409.02334",
+      },
     ],
     relatedResearch: [5, 3],
     relatedPublication: [3, 1, 4, 2, 5, 1, 6, 14],
@@ -61,8 +61,10 @@ export const homeCardData = [
           "UGVs have the potential to revolutionize various industries, such as agriculture, construction, and transportation, by enabling safe and efficient delivery of goods, services, and information.",
       },
     ],
+
     relatedResearch: [1, 2],
     relatedPublication: [13, 17, 22, 23, 26, 16],
+
   },
   {
     title: "Robotic Manupulator (Arm) Research",

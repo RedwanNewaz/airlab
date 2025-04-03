@@ -12,6 +12,7 @@ import { homeCardData  } from "./constants/data/homeData";
 import { researchData } from "./constants/data/researchData";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ResearchDetail from "./pages/ResearchDetail";
+import Video from "./pages/Video";
 
 function App() {
   
@@ -39,6 +40,7 @@ function App() {
                 <Route key={index} path={`/research/${pathTitle}-${item.id}`} element={<ResearchDetail researchDetail={item}/>} />
               )
             })}
+            (<Route path="/video" element={<Video />} />)
           </Routes>
         </div>
         <Footer />
