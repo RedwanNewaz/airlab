@@ -2,7 +2,11 @@ import {React, useEffect} from "react";
 import HeroContainer from "../components/HeroContainer";
 import Maps from "../components/Maps";
 import { contactData } from "../constants/data/contactData";
-import { Stack, Box, Typography, Paper, Grid2, Avatar } from "@mui/material";
+import { Stack,
+  //  Box, 
+   Typography, 
+  // Paper,
+   Grid2, Avatar } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { heroContact } from "../constants/data/heroImageData";

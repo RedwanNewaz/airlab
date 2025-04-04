@@ -3,13 +3,15 @@ import {
   Typography,
   Stack,
   Box,
-  Button,
+  // Button,
   useMediaQuery,
   Chip,
 } from "@mui/material";
 import { React, useEffect } from "react";
 import RelatedResearchPublication from "../components/RelatedResearchPublication";
 import VideoBox from "../components/VideoBox";
+
+
 
 export default function About({ aboutData }) {
   const isMediumScreen = useMediaQuery("(max-width:1280px)"); // Media query for Medium screens

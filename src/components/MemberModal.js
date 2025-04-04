@@ -1,9 +1,12 @@
-import { React, useState } from "react";
+import { React, 
+  // useState 
+
+} from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import Grid from "@mui/material/Grid2";
+// import Grid from "@mui/material/Grid2";
 import { useMediaQuery } from "@mui/material";
 import { Stack } from "@mui/system";
 
@@ -38,12 +41,13 @@ export default function MemberModal({ handleModal, memberData, openModal }) {
         }}
       >
         <Stack spacing={2} justifyContent={'center'} alignItems={'center'}>
-            <img
-              src={
+            <img 
+            src={
                 memberData.photo
                   ? require(`../assets/images/${memberData.photo}`)
                   : require("../assets/images/profile.png")
               }
+              alt=""
               width={"50%"}
             />
           <Stack spacing={2}>

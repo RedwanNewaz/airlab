@@ -24,7 +24,7 @@ export default function TopNews() {
           color: "#2C3E50",
           textAlign: "center",
           backgroundColor: "#3498DB", // Header background for contrast
-          color: "#FFFFFF", // White text for header
+          // color: "#FFFFFF", // White text for header
           borderTopLeftRadius: "8px",
           borderTopRightRadius: "8px",
         }}

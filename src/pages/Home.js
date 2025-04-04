@@ -1,16 +1,18 @@
 import {React, useEffect} from "react";
-import { Typography, Box, Stack, Grid2, useMediaQuery } from "@mui/material";
+import { Typography, Box, Stack, Grid2, 
+  // useMediaQuery 
+} from "@mui/material";
 import { homeData, homeCardData } from "../constants/data/homeData";
 import { heroHome } from "../constants/data/heroImageData";
 import HeroContainer from "../components/HeroContainer";
-import { newsData } from "../constants/data/newsData";
+// import { newsData } from "../constants/data/newsData";
 import TopNews from "../components/TopNews";
 import HomeCard from "../components/HomeCard";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 export default function Home() {
-  const topNews = newsData.slice(0, 5);
-  const isLaptop = useMediaQuery("(max-width:1189px)"); // For medium screens (e.g., tablets)
+  // const topNews = newsData.slice(0, 5);
+  // const isLaptop = useMediaQuery("(max-width:1189px)"); // For medium screens (e.g., tablets)
 
   useEffect(() => {
     window.scrollTo(0, 0); // Scroll to the top when this component mounts

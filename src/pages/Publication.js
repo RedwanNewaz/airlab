@@ -7,13 +7,14 @@ import {
   Paper,
   Typography,
   Grid2,
-  useMediaQuery,
+  // useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { publicationData, years } from "../constants/data/publicationData";
 import SelectInput from "../components/SelectInput";
 import { heroPublication } from "../constants/data/heroImageData";
 import { useLocation } from "react-router-dom";
+
 
 const ChipPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -26,7 +27,7 @@ export default function Publication() {
   const [publications, setPublications] = useState({});
   const [openBibtex, setOpenBibtex] = useState(null);
   const [openAbstract, setOpenAbstract] = useState(null);
-  const isSmallScreen = useMediaQuery("(max-width:600px)"); // Media query for small screens
+  // const isSmallScreen = useMediaQuery("(max-width:600px)"); // Media query for small screens
 
   const location = useLocation();
 

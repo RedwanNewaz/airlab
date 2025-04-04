@@ -5,14 +5,14 @@ import {
   Grid2,
   useMediaQuery,
 } from "@mui/material";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+// import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { heroVideo } from "../constants/data/heroImageData";
 import { videoData } from "../constants/data/videoData";
 import VideoCard from "../components/VideoCard";
 
 export default function Video() {
   const isSmallScreen = useMediaQuery("(max-width:600px)");
-  const isMediumScreen = useMediaQuery("(max-width:960px)");
+  // const isMediumScreen = useMediaQuery("(max-width:960px)");
 
   return (
     <div className="full-height-width flex-column-no-gap">

@@ -469,7 +469,6 @@ export const publicationData = [
     title:
       "LCD-RIG: Limited Communication Decentralized Robotic Information Gathering Systems",
     year: "2025",
-    link: "https://ieeexplore.ieee.org/document/10693516",
     authors: [
       "Newaz, Abdullah Al Redwan",
       "Padrao, Paulo",
