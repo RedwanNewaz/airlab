@@ -12,6 +12,9 @@ import { homeCardData  } from "./constants/data/homeData";
 import { researchData } from "./constants/data/researchData";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ResearchDetail from "./pages/ResearchDetail";
+import Projects from "./pages/Projects";
+import Funding from "./pages/Funding";
+import Advising from "./pages/Advising";
 import Video from "./pages/Video";
 
 function App() {
@@ -25,6 +28,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/team" element={<Team />} />
             <Route path="/research" element={<Research />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/funding" element={<Funding />} />
+            <Route path="/join-us" element={<Advising />} />
+            <Route path="/advising" element={<Advising />} />
             <Route path="/publication" element={<Publication />} />
             <Route path="/news" element={<News />} />
             <Route path="/contact" element={<Contact />} />

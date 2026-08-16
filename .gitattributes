@@ -1,0 +1,22 @@
+# Normalize line endings so the repo stores LF regardless of the OS that commits.
+# Without this, files edited on Windows show up as fully-rewritten diffs when git
+# runs from a Linux checkout (and vice versa).
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp4 binary
+*.webm binary
+
+# SVG is text, but keep it LF and out of diff noise.
+*.svg text eol=lf

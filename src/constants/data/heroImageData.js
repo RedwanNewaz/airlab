@@ -1,7 +1,7 @@
 export const heroHome = {
   id: "hero-home",
   title: "Autonomous Intelligent Robotics Lab",
-  subtitle: "University of New Orleans",
+  subtitle: "LSU New Orleans",
 };
 
 export const heroTeam = {
@@ -14,13 +14,33 @@ export const heroTeam = {
 export const heroResearch = {
   id: "hero-research",
   title: "Research",
-  subtitle: "We work on making autonomous systems",
+  subtitle:
+    "Robots that learn from limited data, know what they do not know, and decide what to do next",
+};
+
+export const heroProjects = {
+  id: "hero-projects",
+  title: "Projects",
+  subtitle: "Project websites with code, videos, and results",
+};
+
+export const heroFunding = {
+  id: "hero-funding",
+  title: "Funding",
+  subtitle: "Supported by the NSF, EPA, and NIH",
+};
+
+export const heroAdvising = {
+  id: "hero-advising",
+  title: "Join Us",
+  subtitle: "How I advise, and what to expect in the AiR Lab",
 };
 
 export const heroPublication = {
   id: "hero-publication",
   title: "Publications",
-  subtitle: "We have published several research papers",
+  subtitle:
+    "Peer-reviewed work in IEEE RA-L, ICRA, IROS, T-ITS, and T-ASE",
 };
 
 export const heroContact = {

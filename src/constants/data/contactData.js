@@ -1,22 +1,33 @@
 export const contactData = [
     {
-        name: 'Abdullah Al Redwan Newaz',
-        position: 'Assistant Research Professor',
-        email: 'aredwann@uno.edu',
-        logo: 'profile.png',
+        id: 1,
+        name: 'Redwan Newaz, Ph.D. (PI)',
+        position: 'Assistant Professor, Director of the AiR Lab',
+        email: 'aredwann@lsuneworleans.edu',
+        logo: 'redwan.jpg',
     },
     {
+        id: 2,
         name: 'Sourav Raxit',
-        position: 'Graduate Research Assistant',
+        position: 'Graduate Researcher (Ph.D.)',
         phone: '',
-        email: 'sraxit@uno.edu',
-        logo: ''
+        email: 'sraxit@my.lsuneworleans.edu',
+        logo: 'sourav.png'
     },
     {
-        name: 'Simant Singh',
-        position: 'Undergraduate Research Assistant',
+        id: 3,
+        name: 'Simant Bahadur Singh',
+        position: 'Graduate Researcher (M.S.)',
         phone: '',
-        email: 'sbsingh3@uno.edu',
+        email: 'sbsingh3@my.lsuneworleans.edu',
+        logo: 'simant.png'
+    },
+    {
+        id: 4,
+        name: 'MD Muhtasim Daiyan Rahman',
+        position: 'Undergraduate Researcher (B.S.)',
+        phone: '',
+        email: 'mrahma12@my.lsuneworleans.edu',
         logo: 'profile.png'
     }
 ]

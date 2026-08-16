@@ -10,11 +10,21 @@ import {
   // useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { publicationData, years } from "../constants/data/publicationData";
+import {
+  publicationData,
+  years,
+  categories,
+} from "../constants/data/publicationData";
 import SelectInput from "../components/SelectInput";
 import { heroPublication } from "../constants/data/heroImageData";
 import { useLocation } from "react-router-dom";
 
+
+const CATEGORY_COLORS = {
+  "Journal Article": "#1565c0",
+  "Conference Paper": "#2e7d32",
+  "Under Review": "#ef6c00",
+};
 
 const ChipPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -58,37 +68,25 @@ export default function Publication() {
     setOpenAbstract(openAbstract === id ? null : id);
   };
 
-  const getAllPublicationsByYear = () => {
-    return publicationData.reduce((acc, publication) => {
-      if (!acc[publication.year]) {
-        acc[publication.year] = [];
-      }
-      acc[publication.year].push(publication);
-      return acc;
-    }, {});
-  };
-
-  const filterPublications = (menuItems) => {
-    if (menuItems.length === 0) {
-      setPublications(getAllPublicationsByYear());
-    } else {
-      const filteredPubs = publicationData.reduce((acc, pub) => {
-        const pubYear = pub.year;
-        if (menuItems.includes(pubYear)) {
-          if (!acc[pubYear]) {
-            acc[pubYear] = [];
-          }
-          acc[pubYear].push(pub);
-        }
-        return acc;
-      }, {});
-      setPublications(filteredPubs);
-    }
-  };
+  const [yearFilter, setYearFilter] = useState([]);
+  const [categoryFilter, setCategoryFilter] = useState([]);
 
   useEffect(() => {
-    setPublications(getAllPublicationsByYear());
-  }, []);
+    const grouped = publicationData
+      .filter(
+        (pub) =>
+          (yearFilter.length === 0 || yearFilter.includes(pub.year)) &&
+          (categoryFilter.length === 0 || categoryFilter.includes(pub.category))
+      )
+      .reduce((acc, pub) => {
+        if (!acc[pub.year]) {
+          acc[pub.year] = [];
+        }
+        acc[pub.year].push(pub);
+        return acc;
+      }, {});
+    setPublications(grouped);
+  }, [yearFilter, categoryFilter]);
 
   return (
     <div className="full-height-width flex-column-no-gap">
@@ -100,17 +98,23 @@ export default function Publication() {
       <Stack
         marginX={"auto"}
         marginTop={{ xs: "4%", sm: "2%" }}
-        direction={"row"}
+        direction={{ xs: "column", sm: "row" }}
         justifyContent="center"
         alignItems="center"
-        spacing={4}
+        spacing={2}
         width="80%"
+        flexWrap="wrap"
+        useFlexGap
       >
         <SelectInput
           label={"Filter By Year"}
           menuOptions={years}
-          sx={{ width: { xs: 200, sm: 300 }, margin: 0 }}
-          saveMenuItems={filterPublications}
+          saveMenuItems={setYearFilter}
+        />
+        <SelectInput
+          label={"Filter By Type"}
+          menuOptions={categories}
+          saveMenuItems={setCategoryFilter}
         />
       </Stack>
       <Box sx={{ px: { xs: "3%", sm: "10%" }, py: "5%", maxWidth: "90vw" }}>
@@ -151,15 +155,36 @@ export default function Publication() {
                         borderRadius: "8px",
                       }}
                     >
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          fontWeight: "bold",
-                          fontSize: { xs: "1rem", sm: "1.25rem" },
-                        }}
+                      <Stack
+                        direction="row"
+                        spacing={1}
+                        alignItems="flex-start"
+                        flexWrap="wrap"
+                        useFlexGap
                       >
-                        {index + 1}. {pub.title}
-                      </Typography>
+                        <Typography
+                          variant="h6"
+                          sx={{
+                            fontWeight: "bold",
+                            fontSize: { xs: "1rem", sm: "1.25rem" },
+                            flexGrow: 1,
+                          }}
+                        >
+                          {index + 1}. {pub.title}
+                        </Typography>
+                        {pub.category && (
+                          <Chip
+                            label={pub.category}
+                            size="small"
+                            variant="outlined"
+                            sx={{
+                              fontWeight: 600,
+                              borderColor: CATEGORY_COLORS[pub.category] || "#9e9e9e",
+                              color: CATEGORY_COLORS[pub.category] || "#9e9e9e",
+                            }}
+                          />
+                        )}
+                      </Stack>
                       <Typography
                         variant="body2"
                         sx={{
@@ -179,7 +204,13 @@ export default function Publication() {
                         {pub.journal}
                       </Typography>
 
-                      <Stack direction="row" spacing={2} alignItems={"center"}>
+                      <Stack
+                        direction="row"
+                        spacing={2}
+                        alignItems={"center"}
+                        flexWrap="wrap"
+                        useFlexGap
+                      >
                         <Chip
                           label="BibTeX"
                           color="primary"
@@ -218,6 +249,22 @@ export default function Publication() {
                             onClick={() => {
                               window.open(
                                 pub.pdf,
+                                "_blank",
+                                "noopener,noreferrer"
+                              );
+                            }}
+                            sx={{ cursor: "pointer" }}
+                          />
+                        )}
+
+                        {pub.projectUrl && (
+                          <Chip
+                            label="Project Site"
+                            color="success"
+                            size="small"
+                            onClick={() => {
+                              window.open(
+                                pub.projectUrl,
                                 "_blank",
                                 "noopener,noreferrer"
                               );

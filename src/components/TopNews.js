@@ -3,7 +3,8 @@ import { newsData } from "../constants/data/newsData";
 import { Link } from "react-router-dom";
 
 export default function TopNews() {
-  const topNews = newsData.slice(-5).reverse();
+  // newsData is ordered newest first, so the first five are the latest items.
+  const topNews = newsData.slice(0, 5);
 
   return (
     <Box

@@ -10,6 +10,8 @@ import { Stack,
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { useMediaQuery } from "@mui/material";
 import { heroContact } from "../constants/data/heroImageData";
+import { ProfileLinkButtons } from "../components/ProfileLinks";
+import { labInfo } from "../constants/data/linkData";
 
 export default function Contact() {
   const isSmallScreen = useMediaQuery("(max-width:400px)"); // Media query for small screens
@@ -33,6 +35,54 @@ export default function Contact() {
           py: { xs: 2, sm: 4 },
         }}
       >
+
+        <Stack spacing={1} alignItems="center" sx={{ pt: 2 }}>
+          <Typography
+            variant="h5"
+            align="center"
+            sx={{ fontWeight: "bold", fontSize: { xs: "1.5rem", md: "2rem" } }}
+          >
+            {labInfo.name}
+          </Typography>
+          <Typography variant="body1" align="center" sx={{ color: "#546E7A" }}>
+            {labInfo.department}, {labInfo.institution}
+          </Typography>
+          {labInfo.addressLines.map((line) => (
+            <Typography
+              key={line}
+              variant="body1"
+              align="center"
+              sx={{ color: "#546E7A" }}
+            >
+              {line}
+            </Typography>
+          ))}
+          <Typography variant="body1" align="center" sx={{ color: "#546E7A" }}>
+            {labInfo.phone} &nbsp;&bull;&nbsp; {labInfo.email}
+          </Typography>
+          <Typography variant="body2" align="center" sx={{ color: "#546E7A" }}>
+            ORCID:{" "}
+            <a
+              href={labInfo.orcidUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#1e88e5" }}
+            >
+              {labInfo.orcid}
+            </a>
+          </Typography>
+        </Stack>
+
+        <Stack spacing={2} alignItems="center">
+          <Typography
+            variant="h5"
+            align="center"
+            sx={{ fontWeight: "bold", fontSize: { xs: "1.5rem", md: "2rem" } }}
+          >
+            Find us online
+          </Typography>
+          <ProfileLinkButtons />
+        </Stack>
 
         <Stack spacing={2} alignItems="center">
           <Typography

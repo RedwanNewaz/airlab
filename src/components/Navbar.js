@@ -9,7 +9,6 @@ import {
   Container,
   Button,
   MenuItem,
-  Avatar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
@@ -20,11 +19,13 @@ const pages = [
   { id: 1, path: "/", label: "Home" },
   { id: 2, path: "/team", label: "Team" },
   { id: 3, path: "/research", label: "Research" },
-  { id: 4, path: "/Publication", label: "Publication" },
-  { id: 5, path: "/news", label: "News" },
-  { id: 6, path: "/video", label: "Videos" },
-  { id: 7, path: "/contact", label: "Contact" },
-  { id: 8, path: "https://research-dashboard-pied.vercel.app/", label: "Research Dashboard"}
+  { id: 4, path: "/projects", label: "Projects" },
+  { id: 5, path: "/funding", label: "Funding" },
+  { id: 6, path: "/publication", label: "Publication" },
+  { id: 7, path: "/news", label: "News" },
+  { id: 8, path: "/video", label: "Videos" },
+  { id: 9, path: "/join-us", label: "Join Us" },
+  { id: 10, path: "/contact", label: "Contact" },
 
 ];
 
@@ -109,16 +110,20 @@ export default function Navbar() {
             </Menu>
           </Box>
 
-            <Avatar
-              alt="Air Lab Logo"
+            <Box
+              component="img"
+              alt="AiR Lab Logo"
               src={require("../assets/images/airlab-logo.png")}
               sx={{
-                width: 64,
-                height: 64,
+                height: 56,
+                width: "auto",
+                objectFit: "contain",
+                backgroundColor: "#fff",
+                borderRadius: "10px",
+                p: "4px",
                 mr: { xs: 2, md: 2 },
                 mb: { xs: 2, md: 0 },
                 mt: { xs: 2, md: 0 },
-
               }}
             />
             <Typography

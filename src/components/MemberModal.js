@@ -54,6 +54,16 @@ export default function MemberModal({ handleModal, memberData, openModal }) {
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {memberData.name} - {memberData.position}
             </Typography>
+            {memberData.email && (
+              <Typography
+                variant="body2"
+                component="a"
+                href={`mailto:${memberData.email}`}
+                sx={{ color: "primary.main", wordBreak: "break-all" }}
+              >
+                {memberData.email}
+              </Typography>
+            )}
             <Typography id="modal-modal-description">
               {memberData.description}
             </Typography>

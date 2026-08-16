@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Accordion from "@mui/material/Accordion";
 import {
   Box,
+  Chip,
   Stack,
   Typography,
   AccordionSummary,
@@ -139,6 +140,30 @@ export default function News() {
               >
                 {newsItem.content}
               </Typography>
+
+              {newsItem.links && newsItem.links.length > 0 && (
+                <Stack
+                  direction="row"
+                  spacing={1}
+                  flexWrap="wrap"
+                  useFlexGap
+                  sx={{ mt: 2 }}
+                >
+                  {newsItem.links.map((link, linkIndex) => (
+                    <Chip
+                      key={linkIndex}
+                      label={link.label}
+                      color="primary"
+                      size="small"
+                      variant="outlined"
+                      onClick={() =>
+                        window.open(link.href, "_blank", "noopener,noreferrer")
+                      }
+                      sx={{ cursor: "pointer" }}
+                    />
+                  ))}
+                </Stack>
+              )}
             </AccordionDetails>
           </Accordion>
         ))}

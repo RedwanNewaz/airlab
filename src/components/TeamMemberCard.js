@@ -75,6 +75,19 @@ export default function TeamMemberCard({ memberData }) {
             >
               {memberData.position}
             </Typography>
+            {memberData.email && (
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "primary.main",
+                  fontSize: "0.85rem",
+                  mt: 0.5,
+                  wordBreak: "break-all",
+                }}
+              >
+                {memberData.email}
+              </Typography>
+            )}
           </CardContent>
         </CardActionArea>
       </Card>

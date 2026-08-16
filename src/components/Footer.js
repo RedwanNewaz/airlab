@@ -1,9 +1,7 @@
 import React from 'react';
-import { Box, Grid2, Stack, Typography, Avatar, IconButton } from '@mui/material';
-// import FacebookIcon from '@mui/icons-material/Facebook';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
+import { Box, Grid2, Stack, Typography } from '@mui/material';
+import ProfileLinks from './ProfileLinks';
+import { labInfo } from '../constants/data/linkData';
 
 export default function Footer() {
   return (
@@ -11,10 +9,20 @@ export default function Footer() {
       <Grid2 container spacing={3} justifyContent="space-around" alignItems="center">
 
         <Grid2 item xs={12} sm={6} md={4} display="flex" alignItems="center" justifyContent={{ xs: 'center', md: 'flex-start' }}>
-          <Avatar
-            alt="Air Lab Logo"
+          <Box
+            component="img"
+            alt="AiR Lab Logo"
             src={require("../assets/images/airlab-logo.png")}
-            sx={{ width: 64, height: 64, mr: { xs: 0, md: 2 }, mb: { xs: 2, md: 0 } }}
+            sx={{
+              height: 64,
+              width: 'auto',
+              objectFit: 'contain',
+              backgroundColor: '#fff',
+              borderRadius: '10px',
+              p: '4px',
+              mr: { xs: 0, md: 2 },
+              mb: { xs: 2, md: 0 },
+            }}
           />
           <Stack alignItems='center' spacing={1} textAlign='left'>
             <Typography
@@ -31,6 +39,16 @@ export default function Footer() {
             <Typography variant="body2" sx={{ color: '#b0b0b0' }}>
               Revolutionizing robotics research.
             </Typography>
+            <Stack spacing={0} sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+              {labInfo.addressLines.map((line) => (
+                <Typography key={line} variant="body2" sx={{ color: '#b0b0b0' }}>
+                  {line}
+                </Typography>
+              ))}
+              <Typography variant="body2" sx={{ color: '#b0b0b0' }}>
+                {labInfo.email}
+              </Typography>
+            </Stack>
           </Stack>
         </Grid2>
 
@@ -39,41 +57,24 @@ export default function Footer() {
           <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 1 }}>
             Connect with Us
           </Typography>
-          <Stack direction="row" justifyContent="center" spacing={2}>
-            <IconButton href="https://github.com/RedwanNewaz/" target="_blank" color="inherit">
-              <GitHubIcon fontSize="large" />
-            </IconButton>
-            <IconButton href="https://www.linkedin.com/in/abdullah-al-redwan-newaz-5ba849130/" target="_blank" color="inherit">
-              <LinkedInIcon fontSize="large" />
-            </IconButton>
-            <IconButton href="mailto:aredwann@uno.com" color="inherit">
-              <EmailIcon fontSize="large" />
-            </IconButton>
-          </Stack>
+          <ProfileLinks />
         </Grid2>
 
 
-        <Grid2 item xs={12} sm={6} md={4} display="flex" alignItems='center' justifyContent={{ xs: 'center', md: 'flex-start' }}>
-          <Avatar
-            alt="UNO Logo"
-            src={require("../assets/images/uno-logo.jpg")}
-            sx={{ width: 64, height: 64, mr: { xs: 0, md: 2 }, mb: { xs: 2, md: 0 } }}
-          />
-          <Stack spacing={1} >
-            <Typography
-              variant="h5"
+        <Grid2 item xs={12} sm={6} md={4} display="flex" alignItems='center' justifyContent="center">
+          <Stack spacing={1.5} alignItems="center">
+            <Box
+              component="img"
+              alt="LSU New Orleans"
+              src={require("../assets/images/lsu-new-orleans-logo.png")}
               sx={{
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.2rem',
-                fontSize: { xs: '1.5rem', md: '1.75rem' },
-                textAlign: 'center',
+                height: { xs: 56, md: 68 },
+                width: 'auto',
+                display: 'block',
               }}
-            >
-              UNIVERSITY OF NEW ORLEANS
-            </Typography>
+            />
             <Typography variant="body2" sx={{ color: '#b0b0b0' }}>
-              &copy; 2024 Air Lab. All rights reserved.
+              &copy; {new Date().getFullYear()} AiR Lab. All rights reserved.
             </Typography>
           </Stack>
         </Grid2>

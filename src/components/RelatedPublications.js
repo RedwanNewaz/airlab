@@ -6,7 +6,9 @@ import { publicationData } from "../constants/data/publicationData";
 export default function RelatedPublications({ pubIds, overflow=false }) {
   const relatedPublication =
     pubIds && pubIds.length > 0
-      ? pubIds.map((id) => publicationData.find((item) => item.id === id))
+      ? [...new Set(pubIds)]
+          .map((id) => publicationData.find((item) => item.id === id))
+          .filter(Boolean)
       : [];
 
   return (

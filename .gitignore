@@ -4,20 +4,56 @@
 /node_modules
 /.pnp
 .pnp.js
+/.yarn
 
 # testing
 /coverage
 
 # production
 /build
+/dist
 
-# misc
-.DS_Store
+# environment
+.env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+
+# caches
+.eslintcache
+.cache
+.parcel-cache
+.npm
+
+# editors and IDEs
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+*.sublime-workspace
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# scratch files from tooling and cleanup
+_to_delete/
+*.zip
+*.tmp
+*.bak
+*.orig
+*.rej
